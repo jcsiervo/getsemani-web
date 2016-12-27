@@ -4,18 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/php/emailProcess.php" line="9" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e4849b-6658-49a7-972a-274ab4ad62cb" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/blog.html" afterPath="$PROJECT_DIR$/eventos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/about.html" afterPath="$PROJECT_DIR$/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact-thank-you.html" afterPath="$PROJECT_DIR$/contact-thank-you.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact.html" afterPath="$PROJECT_DIR$/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index_bak.html" afterPath="$PROJECT_DIR$/index_bak.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media_musica.html" afterPath="$PROJECT_DIR$/media_musica.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media_predicaciones.html" afterPath="$PROJECT_DIR$/media_predicaciones.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/media_radio.html" afterPath="$PROJECT_DIR$/media_radio.html" />
-    </list>
+    <list default="true" id="36e4849b-6658-49a7-972a-274ab4ad62cb" name="Default" comment="" />
     <ignored path="business casual.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -738,12 +727,12 @@
       <workItem from="1482349111129" duration="1000" />
       <workItem from="1482349225549" duration="4186000" />
       <workItem from="1482353936483" duration="57000" />
-      <workItem from="1482869501868" duration="3009000" />
+      <workItem from="1482869501868" duration="3295000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="93230000" />
+    <option name="totallyTimeSpent" value="93516000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
