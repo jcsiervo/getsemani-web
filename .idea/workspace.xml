@@ -4,11 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/php/emailProcess.php" line="9" mnemonic="2" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e4849b-6658-49a7-972a-274ab4ad62cb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eventos.html" afterPath="$PROJECT_DIR$/eventos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/responsive-calendar.js" afterPath="$PROJECT_DIR$/js/responsive-calendar.js" />
-    </list>
+    <list default="true" id="36e4849b-6658-49a7-972a-274ab4ad62cb" name="Default" comment="" />
     <ignored path="business casual.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -802,12 +798,12 @@
       <workItem from="1482349111129" duration="1000" />
       <workItem from="1482349225549" duration="4186000" />
       <workItem from="1482353936483" duration="57000" />
-      <workItem from="1482869501868" duration="13274000" />
+      <workItem from="1482869501868" duration="13377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103495000" />
+    <option name="totallyTimeSpent" value="103598000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
