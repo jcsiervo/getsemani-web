@@ -16,7 +16,7 @@
 
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
-    <link href="css/calender.css" rel="stylesheet">
+    <link href="css/responsive-calender.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -30,7 +30,6 @@
     <![endif]-->
 
 </head>
-
 <body>
 
 <div class="brand" id ="emblem">Ministerios Getsemani</div>
@@ -74,136 +73,55 @@
     <!-- /.container -->
 </nav>
 
-    <div class="container">
+<div class="container">
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Company
-                        <strong>blog</strong>
-                    </h2>
-                    <hr>
-                </div>
-                <div class="calendar-container">
+  <div class="row">
+    <div class="box">
+      <div class="container">
+        <!-- Responsive calendar - START -->
+        <div class="responsive-calendar">
+          <div class="controls">
+            <a class="pull-left" data-go="prev"><div class="btn btn-primary">Prev</div></a>
+            <h4><span data-head-year></span> <span data-head-month></span></h4>
+            <a class="pull-right" data-go="next"><div class="btn btn-primary">Next</div></a>
+          </div><hr/>
+          <div class="day-headers">
+            <div class="day header">Mon</div>
+            <div class="day header">Tue</div>
+            <div class="day header">Wed</div>
+            <div class="day header">Thu</div>
+            <div class="day header">Fri</div>
+            <div class="day header">Sat</div>
+            <div class="day header">Sun</div>
+          </div>
+          <div class="days" data-group="days">
 
-                    <header>
-
-                        <div class="day">18</div>
-                        <div class="month">August</div>
-
-                    </header>
-                    <div class="ring-left"></div>
-                    <div class="ring-right"></div>
-                    <table class="calendar">
-
-                        <thead>
-
-                        <tr>
-
-                            <td>Mon</td>
-                            <td>Tue</td>
-                            <td>Wed</td>
-                            <td>Thu</td>
-                            <td>Fri</td>
-                            <td>Sat</td>
-                            <td>Sun</td>
-
-                        </tr>
-
-                        </thead>
-
-                        <tbody>
-
-                        <tr>
-                            <td class="prev-month">29</td>
-                            <td class="prev-month">30</td>
-                            <td class="prev-month">31</td>
-                            <td>1</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>4</td>
-                        </tr>
-
-                        <tr>
-                            <td>5</td>
-                            <td>6</td>
-                            <td>7</td>
-                            <td>8</td>
-                            <td>9</td>
-                            <td>10</td>
-                            <td>11</td>
-                        </tr>
-
-                        <tr>
-                            <td>12</td>
-                            <td>13</td>
-                            <td>14</td>
-                            <td>15</td>
-                            <td>16</td>
-                            <td>17</td>
-                            <td class="current-day">18</td>
-                        </tr>
-
-                        <tr>
-                            <td>19</td>
-                            <td>20</td>
-                            <td>21</td>
-                            <td>22</td>
-                            <td>23</td>
-                            <td>24</td>
-                            <td>25</td>
-                        </tr>
-
-                        <tr>
-                            <td>26</td>
-                            <td>27</td>
-                            <td>28</td>
-                            <td>29</td>
-                            <td>30</td>
-                            <td>31</td>
-                            <td class="next-month">1</td>
-                        </tr>
-
-                        </tbody>
-
-                    </table>
-                </div> <!-- end calendar-container -->
-
-
-                <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="img/slide-2.jpg" alt="">
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <a href="#" class="btn btn-default btn-lg">Read More</a>
-                    <hr>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="img/slide-3.jpg" alt="">
-                    <h2>Post Title
-                        <br>
-                        <small>October 13, 2013</small>
-                    </h2>
-                    <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-                    <a href="#" class="btn btn-default btn-lg">Read More</a>
-                    <hr>
-                </div>
-                <div class="col-lg-12 text-center">
-                    <ul class="pager">
-                        <li class="previous"><a href="#">&larr; Older</a>
-                        </li>
-                        <li class="next"><a href="#">Newer &rarr;</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+          </div>
         </div>
+        <!-- Responsive calendar - END -->
+      </div>
+      <script src="../js/jquery.js"></script>
+      <script src="../js/bootstrap.min.js"></script>
+      <script src="../js/responsive-calendar.js"></script>
+      <script type="text/javascript">
+        $(document).ready(function () {
+          $(".responsive-calendar").responsiveCalendar({
+            time: '2013-05',
+            events: {
+              "2013-04-30": {"number": 5, "url": "http://w3widgets.com/responsive-slider"},
+              "2013-04-26": {"number": 1, "url": "http://w3widgets.com"},
+              "2013-05-03":{"number": 1},
+              "2013-06-12": {}}
+          });
+        });
+      </script>
+
 
     </div>
-    <!-- /.container -->
+  </div>
+
+</div>
+<!-- /.container -->
 
 <footer id="footerContainer">
     <div class="container">
@@ -215,11 +133,12 @@
     </div>
 </footer>
 
-    <!-- jQuery -->
+    <!-- jQuery
     <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
+    <!-- Bootstrap Core JavaScript
     <script src="js/bootstrap.min.js"></script>
+    -->
 
 </body>
 
