@@ -18,9 +18,10 @@
   <link href="css/responsive-calender.css" rel="stylesheet">
 
   <!-- Javascript -->
-  <script src="../js/jquery.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/responsive-calendar.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/responsive-calendar.js"></script>
+  <script src="js/events-reader.js"></script>
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -139,17 +140,12 @@
     <div class="box">
       <div class="col-lg-12 text-center">
         <hr>
-        <h2>Post Title
-          <br>
+        <h2 id="event_title">Post Title</h2>
+        <h2>
           <small id="date_display"></small>
           <script type="text/javascript">
-            function spanishDate(d){
-              var weekday=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
-              var monthname=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
-              return weekday[d.getDay()]+" "+d.getDate()+" de "+monthname[d.getMonth()]+" de "+d.getFullYear()
-            }
-            var d = new Date();
-            document.getElementById("date_display").innerHTML = spanishDate(d);
+            var today = new Date();
+            document.getElementById("date_display").innerHTML = spanishDate(today);
           </script>
         </h2>
         <hr>
@@ -158,10 +154,35 @@
         <img class="img-responsive img-border-left" src="img/slide-2.jpg" alt="">
       </div>
       <div class="col-md-6">
-        <p>This is a great place to introduce your company or project and describe what you do.</p>
-        <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
-        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-      </div>
+        <p id="event_desc"></p>
+        <script type="text/javascript">
+          var today = new Date();
+          var dd = today.getDate();
+          var mm = today.getMonth()+1; //January is 0!
+          var yyyy = today.getFullYear();
+          if(dd<10) {
+            dd='0'+dd
+          }
+          if(mm<10) {
+            mm='0'+mm
+          }
+
+          var event_date = yyyy+'-'+mm+'-'+dd;
+          //event_date = "2017-01-06";
+
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              var event_Details = parseXML(this, event_date);
+              document.getElementById("event_title").innerHTML = event_Details.title;
+              document.getElementById("event_desc").innerHTML = event_Details.description;
+            }
+          };
+          xhttp.open("GET", "events/eventos-getsemani.xml", false);
+          xhttp.send();
+          //alert();
+        </script>
+     </div>
       <div class="clearfix"></div>
       <div class="col-lg-12 text-center">
         <ul class="pager">

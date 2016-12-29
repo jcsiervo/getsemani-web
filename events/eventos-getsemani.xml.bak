@@ -1,0 +1,20 @@
+<events>
+  <event>
+    <date>2016-12-31</date>
+    <title>Despedida de Ano</title>
+    <group>Especial</group>
+    <description>
+      Unete a nosotros para despedir el ano donde invitamos a toda la comunidad para que vengan y distrufen de comida, musica, mensajes de vida, y un tiempo agradable en familia.
+    </description>
+    <image>bg.jpg</image>
+  </event>
+ <event>
+    <date>2017-01-06</date>
+    <title>Ejemplo de Evento</title>
+    <group>Especial</group>
+    <description>
+      Sabes que este es un ejemplo y si puedes verlo, pues sirvio!
+    </description>
+    <image>bg.jpg</image>
+  </event>
+</events>
