@@ -149,14 +149,13 @@
                 if (this.readyState == 4 && this.status == 200) {
                   var event_Details = parseXML(this, key, false);
                   var txt = "";
-                  var dash = '-';
                   var i;
                   document.getElementById("date_display").innerHTML = spanishDate(date);
 
                   for(i = 0; i < event_Details.events.length; ++i) {
                     txt += event_Details.events[i].title + "<br>" +
                             "Horario: " + event_Details.events[i].start +
-                            + " " + dash + " "+  event_Details.events[i].end + "<br>" +
+                            " - " + event_Details.events[i].end + "<br>" +
                             event_Details.events[i].description +
                             "<br>" + "<br>";
                   }
