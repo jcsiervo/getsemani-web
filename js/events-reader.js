@@ -7,30 +7,55 @@
 **/
 
 function parseXML(xml, date, mostRecent){
-    var x, i;
+
+    var i, j;
     var xmlDoc = xml.responseXML;
     var eventObject = {
         date: date,
-        title: "No hay eventos para esta fecha",
-        group: "",
-        description: ""
+        events: [{ title: "No Events!",
+            start : "",
+            end : "",
+            description : ""}]
     };
 
-    x = xmlDoc.getElementsByTagName("event");
-    if ((x.length > 0) && (mostRecent))
+    var date_events = xmlDoc.getElementsByTagName("date");
+    if ((date_events.length > 0) && mostRecent)
     {
-        eventObject.date = xmlDoc.getElementsByTagName("date")[0].childNodes[0].nodeValue;
-        eventObject.title = xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
-        eventObject.group = xmlDoc.getElementsByTagName("group")[0].childNodes[0].nodeValue;
-        eventObject.description = xmlDoc.getElementsByTagName("description")[0].childNodes[0].nodeValue;
+        var events_for_date = date_events[0].getElementsByTagName("title");
+        eventObject.date = date_events[0].getAttribute('value');
+
+        // Remove empty element
+        eventObject.events.pop();
+        for (i = 0; i < events_for_date.length ;i++) {
+            eventObject.events.push({
+                title: events_for_date[i].getAttribute("value"),
+                start : events_for_date[i].getElementsByTagName("startTime")[0].childNodes[0].nodeValue,
+                end : events_for_date[i].getElementsByTagName("endTime")[0].childNodes[0].nodeValue,
+                description : events_for_date[i].getElementsByTagName("description")[0].childNodes[0].nodeValue
+            });
+        }
+        return eventObject;
     }
-    for (i = 0; i < x.length ;i++) {
-        var elem_date = xmlDoc.getElementsByTagName("date")[i].childNodes[0].nodeValue;
-        if (elem_date == date) {
-            eventObject.date = xmlDoc.getElementsByTagName("date")[i].childNodes[0].nodeValue;
-            eventObject.title = xmlDoc.getElementsByTagName("title")[i].childNodes[0].nodeValue;
-            eventObject.group = xmlDoc.getElementsByTagName("group")[i].childNodes[0].nodeValue;
-            eventObject.description = xmlDoc.getElementsByTagName("description")[i].childNodes[0].nodeValue;
+
+    for (i = 0; i < date_events.length ;i++)
+    {
+        var elem_date = date_events[i].getAttribute('value');
+
+        if (elem_date == date)
+        {
+            var events_element = date_events[i].getElementsByTagName("title");
+            eventObject.date = elem_date;
+
+            // Remove empty element
+            eventObject.events.pop();
+            for (j = 0; j < events_element.length; j++) {
+                eventObject.events.push({
+                    title: events_element[j].getAttribute("value"),
+                    start : events_element[j].getElementsByTagName("startTime")[0].childNodes[0].nodeValue,
+                    end : events_element[j].getElementsByTagName("endTime")[0].childNodes[0].nodeValue,
+                    description : events_element[j].getElementsByTagName("description")[0].childNodes[0].nodeValue
+                });
+            }
         }
     }
     return eventObject;

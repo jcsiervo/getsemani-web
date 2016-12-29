@@ -143,13 +143,25 @@
             onDayClick: function(events) {
               var key = $(this).data('year')+'-'+addLeadingZero( $(this).data('month') )+'-'+addLeadingZero( $(this).data('day') );
               var date = new Date($(this).data('year'),($(this).data('month')-1),$(this).data('day'));
+
               var xhttp = new XMLHttpRequest();
               xhttp.onreadystatechange = function() {
                 if (this.readyState == 4 && this.status == 200) {
                   var event_Details = parseXML(this, key, false);
-                  document.getElementById("event_title").innerHTML = event_Details.title;
-                  document.getElementById("event_desc").innerHTML = event_Details.description;
+                  var txt = "";
+                  var dash = '-';
+                  var i;
                   document.getElementById("date_display").innerHTML = spanishDate(date);
+
+                  for(i = 0; i < event_Details.events.length; ++i) {
+                    txt += event_Details.events[i].title + "<br>" +
+                            "Horario: " + event_Details.events[i].start +
+                            + " " + dash + " "+  event_Details.events[i].end + "<br>" +
+                            event_Details.events[i].description +
+                            "<br>" + "<br>";
+                  }
+                  document.getElementById("event_title").innerHTML = event_Details.events[0].title;
+                  document.getElementById("event_desc").innerHTML = txt;
                 }
               };
               xhttp.open("GET", "events/eventos-getsemani.xml", false);
@@ -194,8 +206,9 @@
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
               var event_Details = parseXML(this, "", true);
-              document.getElementById("event_title").innerHTML = event_Details.title;
-              document.getElementById("event_desc").innerHTML = event_Details.description;
+              document.getElementById("event_title").innerHTML = event_Details.events[1].title;
+              document.getElementById("event_desc").innerHTML = event_Details.events[1].description;
+
               var date_arr = event_Details.date.split("-");
               var date = new Date(date_arr[0],(date_arr[1]-1),date_arr[2]);
               document.getElementById("date_display").innerHTML = spanishDate(date);
