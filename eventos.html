@@ -91,7 +91,7 @@
     <div class="box">
       <div class="container">
         <!-- Responsive calendar - START -->
-        <div class="responsive-calendar">
+        <div class="responsive-calendar" data-start-from-sunday="true" data-translate-months="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre">
           <div class="controls">
             <a class="pull-left" data-go="prev"><div class="btn btn-primary">&#x21E6;</div></a>
             <h4><span data-head-year></span> <span data-head-month></span></h4>
@@ -123,15 +123,49 @@
         if(mm<10) {
           mm='0'+mm
         }
-        var curr_date = yyyy+'-'+mm+'-'+dd;
+       // var curr_date = yyyy+'-'+mm+'-'+dd;
+        $( document ).ready( function() {
+          function addLeadingZero(num) {
+            if (num < 10) {
+              return "0" + num;
+            } else {
+              return "" + num;
+            }
+          }
+
+          $('.responsive-calendar').responsiveCalendar({
+            events: {
+                        "2016-12-30": {"number": 5, "badgeClass": "badge-warning"},
+                        "2016-12-26": {"number": 1, "badgeClass": "badge-warning"},
+                        "2016-12-03": {"number": 1, "badgeClass": "badge-error"},
+                        "2016-12-12": {}
+                      },
+            onDayClick: function(events) {
+              var key = $(this).data('year')+'-'+addLeadingZero( $(this).data('month') )+'-'+addLeadingZero( $(this).data('day') );
+              var date = new Date($(this).data('year'),($(this).data('month')-1),$(this).data('day'));
+              var xhttp = new XMLHttpRequest();
+              xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                  var event_Details = parseXML(this, key, false);
+                  document.getElementById("event_title").innerHTML = event_Details.title;
+                  document.getElementById("event_desc").innerHTML = event_Details.description;
+                  document.getElementById("date_display").innerHTML = spanishDate(date);
+                }
+              };
+              xhttp.open("GET", "events/eventos-getsemani.xml", false);
+              xhttp.send();
+            }
+          });
+        });
+        /*
         $(document).ready(function () {
           $(".responsive-calendar").responsiveCalendar({
             time: yyyy+'-'+mm,
             events: {
-              //"2016-12-03": {"number": 1},
-              [curr_date]: {}}
+              [curr_date]: {}
+            }
           });
-        });
+        });*/
       </script>
     </div>
   </div>
@@ -156,26 +190,15 @@
       <div class="col-md-6">
         <p id="event_desc"></p>
         <script type="text/javascript">
-          var today = new Date();
-          var dd = today.getDate();
-          var mm = today.getMonth()+1; //January is 0!
-          var yyyy = today.getFullYear();
-          if(dd<10) {
-            dd='0'+dd
-          }
-          if(mm<10) {
-            mm='0'+mm
-          }
-
-          var event_date = yyyy+'-'+mm+'-'+dd;
-          //event_date = "2017-01-06";
-
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-              var event_Details = parseXML(this, event_date);
+              var event_Details = parseXML(this, "", true);
               document.getElementById("event_title").innerHTML = event_Details.title;
               document.getElementById("event_desc").innerHTML = event_Details.description;
+              var date_arr = event_Details.date.split("-");
+              var date = new Date(date_arr[0],(date_arr[1]-1),date_arr[2]);
+              document.getElementById("date_display").innerHTML = spanishDate(date);
             }
           };
           xhttp.open("GET", "events/eventos-getsemani.xml", false);

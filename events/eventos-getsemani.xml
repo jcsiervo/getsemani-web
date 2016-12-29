@@ -1,4 +1,13 @@
 <events>
+ <event>
+    <date>2016-12-30</date>
+    <title>Ejemplo de Evento(2016_12_30)</title>
+    <group>Especial</group>
+    <description>
+      Sabes que este es un ejemplo y si puedes verlo, pues sirvio!
+    </description>
+    <image>bg.jpg</image>
+  </event>
   <event>
     <date>2016-12-31</date>
     <title>Despedida de Ano</title>
@@ -10,7 +19,25 @@
   </event>
  <event>
     <date>2017-01-06</date>
-    <title>Ejemplo de Evento</title>
+    <title>Ejemplo de Evento(2017_01_06)</title>
+    <group>Especial</group>
+    <description>
+      Sabes que este es un ejemplo y si puedes verlo, pues sirvio!
+    </description>
+    <image>bg.jpg</image>
+  </event>
+   <event>
+    <date>2017-01-24</date>
+    <title>Ejemplo de Evento(2017_01_24)</title>
+    <group>Especial</group>
+    <description>
+      Sabes que este es un ejemplo y si puedes verlo, pues sirvio!
+    </description>
+    <image>bg.jpg</image>
+  </event>
+   <event>
+    <date>2017-01-30</date>
+    <title>Ejemplo de Evento(2017_01_30)</title>
     <group>Especial</group>
     <description>
       Sabes que este es un ejemplo y si puedes verlo, pues sirvio!
