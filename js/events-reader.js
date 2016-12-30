@@ -12,37 +12,38 @@ function parseXML(xml, date, mostRecent){
     var xmlDoc = xml.responseXML;
     var eventObject = {
         date: date,
-        events: [{ title: "No Events!",
+        events: [{ title: "Eventos",
             start : "",
             end : "",
-            description : ""}]
+            description : "Por lo pronto, no tenemos eventos planeados para esta fecha."}]
     };
 
     var date_events = xmlDoc.getElementsByTagName("date");
-    if ((date_events.length > 0) && mostRecent)
-    {
-        var events_for_date = date_events[0].getElementsByTagName("title");
-        eventObject.date = date_events[0].getAttribute('value');
-
-        // Remove empty element
-        eventObject.events.pop();
-        for (i = 0; i < events_for_date.length ;i++) {
-            eventObject.events.push({
-                title: events_for_date[i].getAttribute("value"),
-                start : events_for_date[i].getElementsByTagName("startTime")[0].childNodes[0].nodeValue,
-                end : events_for_date[i].getElementsByTagName("endTime")[0].childNodes[0].nodeValue,
-                description : events_for_date[i].getElementsByTagName("description")[0].childNodes[0].nodeValue
-            });
+    if ((date_events.length > 0) && mostRecent) {
+        for (i = 0; i < date_events.length ;i++) {
+            var latest_date = date_events[i].getAttribute('value');
+            var date_arr = latest_date.split("-");
+            var date_obj = new Date(date_arr[0],(date_arr[1]-1),date_arr[2]);
+            var today = new Date();
+            date_obj.setHours(today.getHours());
+            date_obj.setMinutes(today.getMinutes() + 1);
+            date_obj.setSeconds(today.getSeconds());
+            if ((date_obj > today) || (date_obj === today)) {
+                date = latest_date;
+                break;
+            }
         }
-        return eventObject;
+        if (date == "") {
+            eventObject.events[0].title = "Eventos";
+            eventObject.events[0].description = "Por lo pronto, no tenemos eventos planeados.";
+            return eventObject;
+        }
     }
 
-    for (i = 0; i < date_events.length ;i++)
-    {
-        var elem_date = date_events[i].getAttribute('value');
+    for (i = 0; i < date_events.length ;i++) {
 
-        if (elem_date == date)
-        {
+        var elem_date = date_events[i].getAttribute('value');
+        if (elem_date == date)  {
             var events_element = date_events[i].getElementsByTagName("title");
             eventObject.date = elem_date;
 
@@ -65,4 +66,23 @@ function spanishDate(d){
     var weekday=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
     var monthname=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
     return weekday[d.getDay()]+" "+d.getDate()+" del "+monthname[d.getMonth()]+" de "+d.getFullYear()
+}
+
+
+function createHTML(date, events_Obj, div_id) {
+    var i;
+    var generateHere = document.getElementById(div_id);
+    generateHere.innerHTML =  '<hr>' +
+        '<h2 class="text-center">' +
+        '<small style="font-size:2.5vh" id="date_display"></small></h2><hr>';
+    document.getElementById("date_display").innerHTML = spanishDate(date);
+    for(i = 0; i < events_Obj.events.length; ++i) {
+        // dynamically create elements
+        var gen_html = '<h2 style="font-size:3vh" id="event_title_' + i + '"></h2>' +
+            '<p  id="event_desc_' + i + '"></p><br>';
+        generateHere.innerHTML += gen_html;
+
+        document.getElementById("event_title_" + i).innerHTML = events_Obj.events[i].title;
+        document.getElementById("event_desc_"+ i).innerHTML = events_Obj.events[i].description;
+    }
 }
