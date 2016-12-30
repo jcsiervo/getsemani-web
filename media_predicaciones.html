@@ -15,6 +15,15 @@
 
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/audioplayer.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="js/audioplayer.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -93,22 +102,53 @@
             <audio controls>
                 <source src="media/Audio/TestRecording.mp3"
                         type='audio/mp3'>
-                <source src="media/Audio/TestRecording.oga"
-                        type='audio/ogg; codecs=vorbis'>
                 <p>Your browser does not support the HTML5 Audio element.</p>
             </audio>
-            </div>
+        </div>
         <div class="col-lg-12" id="bottomBorder">
             <br>
-            <h3>El Juicio</h3>
-            <h5>Domingo, Diciembre 4, 2016</h5>
-            <audio controls>
-                <source src="media/Audio/TestRecording.mp4"
-                        type='audio/mp4'>
-                <source src="media/Audio/TestRecording.oga"
-                        type='audio/ogg; codecs=vorbis'>
-                <p>Your browser does not support the HTML5 Audio element.</p>
-            </audio>
+            <h3>HTML5 Audio Player</h3>
+            <h5>w/ responsive playlist</h5>`
+          <div class="containerPlayer">
+            <div class="column add-bottom">
+              <div id="mainwrap">
+                <div id="nowPlay">
+                  <span class="left" id="npAction">Paused...</span>
+                  <span class="right" id="npTitle"></span>
+                </div>
+                <div id="audiowrap">
+                  <div id="audio0">
+                    <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+                  </div>
+                  <div id="tracks">
+                    <a id="btnPrev">&laquo;</a>
+                    <a id="btnNext">&raquo;</a>
+                  </div>
+                </div>
+                <div id="plwrap">
+                  <ul id="plList">
+                    <li>
+                      <div class="plItem">
+                        <div class="plNum">01.</div>
+                        <div class="plTitle">Retiro de Matrimonios - Metodos Diferentes - Parte 1</div>
+                        <div class="plLength">01:11:35</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="plItem">
+                        <div class="plNum">02.</div>
+                        <div class="plTitle">Retiro de Matrimonios - Metodos Diferentes - Parte 2</div>
+                        <div class="plLength">46:12</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
 
         <div class="clearfix"></div>
@@ -126,11 +166,9 @@
         </div>
     </div>
 </footer>
-
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="js/audioplayer.js"></script>
 </body>
 </html>
