@@ -62,10 +62,41 @@ function parseXML(xml, date, mostRecent){
     return eventObject;
 }
 
+function getAllEvents(xml){
+    var i;
+    var xmlDoc = xml.responseXML;
+    var totalEvents = {};
+    var date_events = xmlDoc.getElementsByTagName("date");
+
+    // first add current date
+/*    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    if(dd<10) {
+        dd='0'+dd
+    }
+    if(mm<10) {
+        mm='0'+mm
+    }
+    var curr_date = yyyy+'-'+mm+'-'+dd;
+    totalEvents[curr_date] = {};*/
+
+    for (i = 0; i < date_events.length ;i++) {
+        var elem_date = date_events[i].getAttribute('value');
+        var events_element = date_events[i].getElementsByTagName("title");
+        totalEvents[elem_date] = {"number": events_element.length};
+        /*totalEvents.push({
+            [elem_date]: {"number": events_element.length}
+        });*/
+    }
+    return totalEvents;
+}
+
 function spanishDate(d){
     var weekday=["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
     var monthname=["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
-    return weekday[d.getDay()]+" "+d.getDate()+" del "+monthname[d.getMonth()]+" de "+d.getFullYear()
+    return weekday[d.getDay()]+" "+d.getDate()+" de "+monthname[d.getMonth()]+" del "+d.getFullYear()
 }
 
 
@@ -74,7 +105,7 @@ function createHTML(date, events_Obj, div_id) {
     var generateHere = document.getElementById(div_id);
     generateHere.innerHTML =  '<hr>' +
         '<h2 class="text-center">' +
-        '<small style="font-size:2.5vh" id="date_display"></small></h2><hr>';
+        '<small style="font-size:2.25vh" id="date_display"></small></h2><hr>';
     document.getElementById("date_display").innerHTML = spanishDate(date);
     for(i = 0; i < events_Obj.events.length; ++i) {
         // dynamically create elements
