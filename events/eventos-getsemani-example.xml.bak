@@ -1,0 +1,33 @@
+<events>
+  <date value="2016-12-30">
+    <title value="Ejemplo de Evento num 1 (2016_12_30)">
+      <startTime>10:00 AM</startTime>
+      <endTime>12:30 PM</endTime>
+      <description>Este es el primero!</description>
+    </title>
+    <title value="Ejemplo de Evento num 2 (2016_12_30)">
+      <startTime>7:00 PM</startTime>
+      <endTime>9:00 PM</endTime>
+      <description>Este es el segundo!</description>
+    </title>
+  </date>
+  <date value="2016-12-31">
+    <title value="Despedida - 1 (2016_12_31)">
+      <startTime>08:00 AM</startTime>
+      <endTime>10:00 AM</endTime>
+      <description>Limpiar antes de Despedida!</description>
+    </title>
+   <title value="Despedida - 2 (2016_12_31)">
+      <startTime>05:00 PM</startTime>
+      <endTime>12:00 AM</endTime>
+      <description>Despedida de Ano!</description>
+    </title>
+  </date>
+  <date value="2017-01-06">
+    <title value="Servicio(2017_01_06)">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Vente a Gozar esta noche!</description>
+    </title>
+  </date>
+</events>

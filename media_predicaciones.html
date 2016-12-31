@@ -19,7 +19,6 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="js/audioplayer.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
@@ -97,18 +96,12 @@
             <hr>
         </div>
         <div class="col-lg-12" id="bottomBorder">
-            <h3>Arepentidos Hoy</h3>
-            <h5>Viernes, Diciembre 2, 2016</h5>
-            <audio controls>
-                <source src="media/Audio/TestRecording.mp3"
-                        type='audio/mp3'>
-                <p>Your browser does not support the HTML5 Audio element.</p>
-            </audio>
+            <h3>Predicaciones</h3>
+            <p>Ahora puedes escuchar predicaciones de diversos temas.</p>
+          <br>
         </div>
         <div class="col-lg-12" id="bottomBorder">
             <br>
-            <h3>HTML5 Audio Player</h3>
-            <h5>w/ responsive playlist</h5>`
           <div class="containerPlayer">
             <div class="column add-bottom">
               <div id="mainwrap">
@@ -126,22 +119,22 @@
                   </div>
                 </div>
                 <div id="plwrap">
-                  <ul id="plList">
-                    <li>
-                      <div class="plItem">
-                        <div class="plNum">01.</div>
-                        <div class="plTitle">Retiro de Matrimonios - Metodos Diferentes - Parte 1</div>
-                        <div class="plLength">01:11:35</div>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="plItem">
-                        <div class="plNum">02.</div>
-                        <div class="plTitle">Retiro de Matrimonios - Metodos Diferentes - Parte 2</div>
-                        <div class="plLength">46:12</div>
-                      </div>
-                    </li>
-                  </ul>
+                  <ul id="plList"></ul>
+                  <script type="text/javascript">
+                    var plist = readPredicasXML();
+                    var generateHere = document.getElementById("plList");
+                    for(var i = 0; i < plist.length; ++i) {
+                      // dynamically create elements
+                      var gen_html = '<li>' +
+                              '<div class="plItem">' +
+                              '<div class="plNum">0' + (i+1) + '.</div>' +
+                              '<div class="plTitle">' + plist[i].name + '</div>' +
+                              '<div class="plLength">' + plist[i].length + '</div>' +
+                              '</div>' +
+                              '</li>';
+                      generateHere.innerHTML += gen_html;
+                    }
+                  </script>
                 </div>
               </div>
             </div>

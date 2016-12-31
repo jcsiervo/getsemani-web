@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<div id='fileNames'></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+  $(document).ready(function() {
+    var jsonData = {
+      "text1": "textData1",
+      "text2": "textData2"
+    };
+
+    $.ajax({
+      type: 'POST',
+      dataType: 'json',
+      data: {json: JSON.stringify(jsonData)},
+      success: function (data) {
+        alert("finally");
+        $('<p></p>').html(data.text1 + " - " + data.text2).appendTo('#fileNames');
+      }
+    });
+    alert("end");
+
+/*  $.ajax({
+    url: "media/Predicaciones/",
+    async: false,
+    success: function(data){
+      alert("Dude Work Man!!");
+      $(data).find("a:contains(.mp3)").each(function(){
+        // will loop through
+        var images = $(this).attr("href");
+
+        //$("#fileNames").append( '<li>'+filename+'</li>');
+        //$('<p></p>').html("This works shawty").appendTo('#fileNames'); //images).appendTo('#fileNames');
+        $('<p></p>').html(images).appendTo('#fileNames');
+
+      });
+    }
+  });*/
+  var git = "Nobody knows";
+  $('<p></p>').html(git).appendTo('#fileNames');
+  });
+
+/*  // Assign handlers immediately after making the request,
+  // and remember the jqxhr object for this request
+  var jqxhr = $.ajax({ url: "example.php" })
+          .success(function() { alert("success"); })
+          .error(function() { alert("error"); })
+          .complete(function() { alert("complete"); });
+
+  // perform other work here ...
+
+  // Set another completion function for the request above
+  jqxhr.complete(function(){ alert("second complete"); });*/
+
+</script>
+</body>

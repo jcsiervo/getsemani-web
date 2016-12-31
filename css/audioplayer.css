@@ -59,10 +59,9 @@ ul { list-style:none; }
 html,body {
 -webkit-font-smoothing:antialiased;
 -webkit-text-size-adjust:100%;
-background-color:#111;
-/*color:#C8C7C8;
-font:20px/24px "Yanone Kaffeesatz", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
-font-weight:300;*/
+
+    /*font:20px/24px "Yanone Kaffeesatz", HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight:300;*/
 padding:5px 0;
 }
 
@@ -102,8 +101,8 @@ p a,p a:visited { line-height:inherit; }*/
 ================================================== */
 
 /* Highlight Styles */
-::selection { background-color:#262223; color:#444; }
-::-moz-selection { background-color:#262223; color:#444; }
+::selection { background-color:#262223; color: white;/*color:#444; */}
+::-moz-selection { background-color:#262223; color: white;/*color:#444; */ }
 
 
 /* Audio Player Styles
@@ -111,8 +110,8 @@ p a,p a:visited { line-height:inherit; }*/
 
 /* Default / Desktop / Firefox */
 audio { margin:0 15px 0 14px; width:670px; }
-#mainwrap { /* add box-shadow or other styles here */ }
-#audiowrap { background-color:#231F20; margin:0 auto; min-height: 200px;}
+#mainwrap { /* add box-shadow or other styles here */color: darkgreen; }
+#audiowrap { background-color:#231F20;  margin:0 auto; min-height: 200px;}
 #plwrap { margin:0 auto; }
 #tracks {
     padding-top: 8px;
@@ -123,9 +122,11 @@ audio { margin:0 15px 0 14px; width:670px; }
     top:3px;
 }
 #btnPrev{
+    background-color: inherit;
     float: left;
 }
 #btnNext{
+    background-color: inherit;
     float: right;
 }
 #nowPlay { display:inline; }
@@ -139,7 +140,7 @@ audio { margin:0 15px 0 14px; width:670px; }
 .plNum { padding-left:21px; width:25px; }
 .plLength { padding-left:21px; position:absolute; right:21px; top:0; }
 .plSel,.plSel:hover { background-color:#262223!important; cursor:default!important; }
-a[id^="btn"] { background-color:#231F20; color:#C8C7C8; cursor:pointer; font-size:50px; margin:0; padding:0 27px 11px; text-decoration:none; }
+a[id^="btn"] { background-color:#231F20; color:green; cursor:pointer; font-size:50px; margin:0; padding:0 27px 11px; text-decoration:none; }
 a[id^="btn"]:last-child { margin-left:-4px; }
 a[id^="btn"]:hover,a[id^="btn"]:active { background-color:#262223; }
 a[id^="btn"]::-moz-focus-inner { border:0; padding:0; }

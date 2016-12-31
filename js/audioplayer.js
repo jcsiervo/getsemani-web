@@ -1,17 +1,42 @@
 // html5media enables <video> and <audio> tags in all major browsers
-// External File: http://api.html5media.info/1.1.8/html5media.min.js
-
+// Information on player at: http://jonhall.info/how_to/create_a_playlist_for_html5_audio
 
 // Add user agent as an attribute on the <html> tag...
-// Inspiration: http://css-tricks.com/ie-10-specific-styles/
 var b = document.documentElement;
 b.setAttribute('data-useragent', navigator.userAgent);
 b.setAttribute('data-platform', navigator.platform);
 
+function getAudioFiles(xml) {
+    var plist = [];
+    var xmlDoc = xml.responseXML;
+
+    var predicas = xmlDoc.getElementsByTagName("filename");
+    for (var i = 0; i < predicas.length ;i++) {
+        plist.push({
+            "track":   (i+1),
+            "name" :   predicas[i].getElementsByTagName("displayname")[0].childNodes[0].nodeValue,
+            "length":  predicas[i].getElementsByTagName("length")[0].childNodes[0].nodeValue,
+            "file" :   predicas[i].getAttribute('value')
+        });
+    }
+    return plist;
+}
+
+function readPredicasXML()
+{
+    var plist = [];
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            plist = getAudioFiles(this);
+        }
+    };
+    xhttp.open("GET", "media/predicaciones.xml", false);
+    xhttp.send();
+    return plist;
+}
 
 // HTML5 audio player + playlist controls...
-// Inspiration: http://jonhall.info/how_to/create_a_playlist_for_html5_audio
-// Mythium Archive: https://archive.org/details/mythium/
 jQuery(function ($) {
     var supportsAudio = !!document.createElement('audio').canPlayType;
     if (supportsAudio) {
@@ -19,18 +44,7 @@ jQuery(function ($) {
             playing = false,
             mediaPath = 'media/Predicaciones/',
             extension = '',
-            tracks = [ {
-                "track": 1,
-                "name": "Retiro de Matrimonios - Metodos Diferentes - Parte 1",
-                "length": "01:11:35",
-                "file": "Matrimonios-Metodos_Diferentes_1"
-            }, {
-                "track": 2,
-                "name": "Retiro de Matrimonios - Metodos Diferentes - Parte 2",
-                "length": "46:12",
-                "file": "Matrimonios-Metodos_Diferentes_2"
-            }
-            ],
+            tracks = readPredicasXML(),
             trackCount = tracks.length,
             npAction = $('#npAction'),
             npTitle = $('#npTitle'),
@@ -104,3 +118,4 @@ jQuery(function ($) {
             loadTrack(index);
     }
 });
+
