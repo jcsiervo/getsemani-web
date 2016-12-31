@@ -15,5 +15,5 @@ $msg = wordwrap($msg,70);
 
 // mail
 mail($to,$subject,$msg,$headers);
-header('Location: ../visitanos.html');
+header('Location: ../contact-thank-you.html');
 ?>
