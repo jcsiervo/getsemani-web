@@ -104,15 +104,15 @@
             <div class="col-md-8" id="map"></div>
             <script>
                 function initMap() {
-                    var mapLatlng = {lat: 28.673257, lng: -81.509419};
-                    var uluru = {lat: 28.692209, lng: -81.551665};
+                    var mapLatlng = {lat: 29.066328, lng: -81.324831};
+                    //var uluru = {lat: 28.692209, lng: -81.551665};
                     var tTitle = 'Iglesia Getsemani';
                     var map = new google.maps.Map(document.getElementById('map'), {
                         zoom: 12,
                         center: mapLatlng
                     });
                     var marker = new google.maps.Marker({
-                        position: uluru,
+                        position: mapLatlng,
                         title: tTitle,
                         map: map
                     });
