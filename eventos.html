@@ -176,9 +176,8 @@
          xhttp.onreadystatechange = function() {
            if (this.readyState == 4 && this.status == 200) {
              var event_Details = parseXML(this, "", true);
-             var date_arr = event_Details.date.split("-");
-             var date = new Date(date_arr[0],(date_arr[1]-1),date_arr[2]);
-             createHTML(date, event_Details, "generate-here");
+             var today = new Date();
+             createHTML(today, event_Details, "generate-here");
            }
          };
          xhttp.open("GET", "events/eventos-getsemani.xml", false);
