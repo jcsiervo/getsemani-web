@@ -7,7 +7,7 @@ $email = $_POST['email'];
 $phone = $_POST['phone'];
 $message = $_POST['message'];
 $subject = "Encuesta de pagina oficial Ministerios Getsemani";
-$headers = "From: ". $email;
+$headers = "From: no-reply@gmail.com";
 
 // set up email
 $msg = "Información del Remitente \nName: " . $name . "\nEmail: " . $email . "\nPhone: " . $phone . "\n\n" . $message;
