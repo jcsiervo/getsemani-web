@@ -17,7 +17,7 @@
       <endTime>10:00 AM</endTime>
       <description>Limpiar antes de Despedida!</description>
     </title>
-   <title value="Despedida - 2 (2016_12_31)">
+    <title value="Despedida - 2 (2016_12_31)">
       <startTime>05:00 PM</startTime>
       <endTime>12:00 AM</endTime>
       <description>Despedida de Ano!</description>
@@ -28,6 +28,13 @@
       <startTime>07:30 PM</startTime>
       <endTime>09:00 PM</endTime>
       <description>Vente a Gozar esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-01-21">
+    <title value="Car Wash! (Lavado de Autos)">
+      <startTime>08:00 AM</startTime>
+      <endTime>12:00 PM</endTime>
+      <description>Traigan sus autos este Sabado para que sea lavado. El costo? Solo una donacion conforme a su Corazon. Todo sera con el proposito de recaudar fondos para el grupo de misioneras de Getsemani que salen pronto! Acompananos!</description>
     </title>
   </date>
 </events>
