@@ -240,6 +240,12 @@ audio {
     margin: 0 auto 0;
 }
 
+.required label:after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
+
 footer p {
     margin: 0;
     padding: 20px 0;
