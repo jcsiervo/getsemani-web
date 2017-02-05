@@ -17,7 +17,7 @@
     <link href="css/custom.css" rel="stylesheet">
     <link href="css/audioplayer.css" rel="stylesheet">
 
-    <!-- jQuery -->
+    <!-- jQuery / AudioPlayer -->
     <script src="js/jquery.js"></script>
     <script src="js/audioplayer.js"></script>
 
@@ -126,12 +126,12 @@
                     for(var i = 0; i < plist.length; ++i) {
                       // dynamically create elements
                       var gen_html = '<li>' +
-                              '<div class="plItem">' +
-                              '<div class="plNum">0' + (i+1) + '.</div>' +
-                              '<div class="plTitle">' + plist[i].name + '</div>' +
-                              '<div class="plLength">' + plist[i].length + '</div>' +
-                              '</div>' +
-                              '</li>';
+                        '<div class="plItem">' +
+                        '<div class="plNum">0' + (i+1) + '.</div>' +
+                        '<div class="plTitle">' + plist[i].name + '</div>' +
+                        '<div class="plLength">' + plist[i].length + '</div>' +
+                        '</div>' +
+                        '</li>';
                       generateHere.innerHTML += gen_html;
                     }
                   </script>
@@ -139,9 +139,6 @@
               </div>
             </div>
           </div>
-
-
-
         </div>
 
         <div class="clearfix"></div>
@@ -159,9 +156,5 @@
         </div>
     </div>
 </footer>
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-<script src="js/audioplayer.js"></script>
 </body>
 </html>

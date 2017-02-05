@@ -12,9 +12,16 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="css/custom.css" rel="stylesheet">
+    <link href="css/audioplayer.css" rel="stylesheet">
+
+    <!-- jQuery / AudioPlayer -->
+    <script src="js/jquery.js"></script>
+    <script src="js/audioplayer.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -78,76 +85,59 @@
     <!-- /.container -->
 </nav>
 <div class="container">
-    <div class="row">
-        <div class="box">
-            <div class="col-lg-12">
-                <hr>
-                <h2 class="intro-text text-center">
-                    Musica <strong>Cristiana</strong>
-                </h2>
-                <hr>
-            </div>
-            <div class="col-lg-12" id="bottomBorder">
-                <h3>JUAN A. PARRILLA</h3>
-                <div id="cp_widget_058d9cc6-d050-4552-9bce-8ba1be46d37f">...</div><script type="text/javascript">
-                var cpo = []; cpo["_object"] ="cp_widget_058d9cc6-d050-4552-9bce-8ba1be46d37f"; cpo["_fid"] = "AcFAi3d5VOXv";
-                var _cpmp = _cpmp || []; _cpmp.push(cpo);
-                (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-                    cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-                    var c = document.getElementsByTagName("script")[0];
-                    c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa <a href='https://www.cincopa.com/solution/enterprise'>Business Video</a> solution.<span>Juan Parrila</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1024</span><span>height</span><span> 1019</span><span>Nueva Cansion</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1024</span><span>height</span><span> 1019</span><span>Es Jesus (Bachata)</span><span>cameramake</span><span> Canon</span><span>focallength</span><span> 50</span><span>height</span><span> 1206</span><span>fnumber</span><span> 2</span><span>exposuretime</span><span> 0.0166666675</span><span>flash</span><span> 16</span><span>originaldate</span><span> 12/20/2016 6:20:56 PM</span><span>width</span><span> 1204</span><span>cameramodel</span><span> Canon EOS 70D</span><span>Como el Pastor</span><span>cameramake</span><span> Canon</span><span>focallength</span><span> 50</span><span>height</span><span> 1206</span><span>fnumber</span><span> 2</span><span>exposuretime</span><span> 0.0166666675</span><span>flash</span><span> 16</span><span>originaldate</span><span> 12/20/2016 6:20:56 PM</span><span>width</span><span> 1204</span><span>cameramodel</span><span> Canon EOS 70D</span><span>Viviendo Fantasias</span></noscript>
-                <br>
+  <div class="row">
+    <div class="box" id="music-player">
+      <div class="col-lg-12">
+        <hr>
+        <h2 class="intro-text text-center">Musica <strong>Cristiana</strong></h2>
+        <hr>
+      </div>
+      <div class="col-lg-12" id="bottomBorder">
+         <br>
+          <div class="containerPlayer">
+            <div class="column add-bottom">
+              <div id="mainwrap">
+                <div id="nowPlay">
+                  <span class="left" id="npAction">Paused...</span>
+                  <span class="right" id="npTitle"></span>
                 </div>
-            <div class="col-lg-12" id="bottomBorder">
-                <h3>Bernando Mateos</h3>
-                <div id="cp_widget_d0ecffd5-5588-4e9a-9338-b6f1dfe653d3">...</div><script type="text/javascript">
-                var cpo = []; cpo["_object"] ="cp_widget_d0ecffd5-5588-4e9a-9338-b6f1dfe653d3"; cpo["_fid"] = "AgLAC19BVOI5";
-                var _cpmp = _cpmp || []; _cpmp.push(cpo);
-                (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-                    cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-                    var c = document.getElementsByTagName("script")[0];
-                    c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa <a href='https://www.cincopa.com/solution/enterprise'>Business Video</a> solution.<span>Bernando Mateos</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 640</span><span>height</span><span> 639</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 640</span><span>height</span><span> 639</span><span>A Cristo Le Voy</span><span>Soberano Senor</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 797</span><span>height</span><span> 800</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 797</span><span>height</span><span> 800</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 608</span><span>height</span><span> 640</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 608</span><span>height</span><span> 640</span><span>Mundo Malo</span><span>Que Lindo Es Mi Cristo</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 791</span><span>height</span><span> 800</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 791</span><span>height</span><span> 800</span><span>La Etiqueta</span><span>Joven X</span></noscript>
-                <br>
+                <div id="audiowrap">
+                  <div id="audio0">
+                    <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
+                  </div>
+                  <div id="tracks">
+                    <a id="btnPrev">&laquo;</a>
+                    <a id="btnNext">&raquo;</a>
+                  </div>
+                  <div class="text-center">
+                    <img class="img-responsive img-thumbnail" id="album-art" src="media/Musica/Artwork/Bernardo_Mateos - Mundo Malo.jpg" alt="">
+                  </div>
+                </div>
+                <div id="plwrap">
+                  <ul id="plList"></ul>
+                  <script type="text/javascript">
+                    var plist = readPredicasXML();
+                    var generateHere = document.getElementById("plList");
+                    for(var i = 0; i < plist.length; ++i) {
+                      // dynamically create elements
+                      var gen_html = '<li>' +
+                          '<div class="plItem">' +
+                          '<div class="plNum">0' + (i+1) + '.</div>' +
+                          '<div class="plTitle">' + plist[i].name + '</div>' +
+                          '<div class="plLength">' + plist[i].length + '</div>' +
+                          '</div>' +
+                          '</li>';
+                      generateHere.innerHTML += gen_html;
+                    }
+                  </script>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-12" id="bottomBorder">
-                <h3>Yolany</h3>
-                <div id="cp_widget_29645047-990a-4dc1-981b-cc649e99d68d">...</div><script type="text/javascript">
-                var cpo = []; cpo["_object"] ="cp_widget_29645047-990a-4dc1-981b-cc649e99d68d"; cpo["_fid"] = "AsJAG0N7VmI_";
-                var _cpmp = _cpmp || []; _cpmp.push(cpo);
-                (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-                    cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-                    var c = document.getElementsByTagName("script")[0];
-                    c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa <a href='https://www.cincopa.com/solution/enterprise'>Business Video</a> solution.<span>Yolany</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 638</span><span>height</span><span> 640</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 638</span><span>height</span><span> 640</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 638</span><span>height</span><span> 640</span><span>Quiero Darte El Corazon</span><span>Razon De Mi Existir</span><span>Roca Firme</span></noscript>
-                <br>
-            </div>
-            <div class="col-lg-12" id="bottomBorder">
-                <h3>Juana Zaragoza</h3>
-                <div id="cp_widget_22a12ff7-61ca-4904-837a-883f03f00f8f">...</div><script type="text/javascript">
-                var cpo = []; cpo["_object"] ="cp_widget_22a12ff7-61ca-4904-837a-883f03f00f8f"; cpo["_fid"] = "A0MA019eveV6";
-                var _cpmp = _cpmp || []; _cpmp.push(cpo);
-                (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-                    cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-                    var c = document.getElementsByTagName("script")[0];
-                    c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa <a href='https://www.cincopa.com/media-platform/html-slideshow'>Slideshow HTML</a> for Business solution.<span>Juana Zaragoza</span><span>Razon De Mi Adoracion</span><span>Siempre Juntos</span><span>cameramake</span><span> Canon</span><span>focallength</span><span> 55</span><span>height</span><span> 1024</span><span>fnumber</span><span> 5.6</span><span>exposuretime</span><span> 0.07692308</span><span>flash</span><span> 16</span><span>originaldate</span><span> 1/17/2017 4:30:59 PM</span><span>width</span><span> 1024</span><span>cameramodel</span><span> Canon EOS 70D</span><span>cameramake</span><span> Canon</span><span>focallength</span><span> 55</span><span>height</span><span> 1024</span><span>fnumber</span><span> 5.6</span><span>exposuretime</span><span> 0.07692308</span><span>flash</span><span> 16</span><span>originaldate</span><span> 1/17/2017 4:30:59 PM</span><span>width</span><span> 1024</span><span>cameramodel</span><span> Canon EOS 70D</span><span>Postrada Ante Tu Altar</span><span>Las Mañanitas</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1024</span><span>height</span><span> 1020</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 1024</span><span>height</span><span> 1020</span><span>Y eres tu</span><span>El Alfarero</span><span>cameramake</span><span> Canon</span><span>focallength</span><span> 55</span><span>height</span><span> 1024</span><span>fnumber</span><span> 5.6</span><span>exposuretime</span><span> 0.125</span><span>flash</span><span> 16</span><span>originaldate</span><span> 1/17/2017 4:31:55 PM</span><span>width</span><span> 1016</span><span>cameramodel</span><span> Canon EOS 70D</span><span>cameramake</span><span> Canon</span><span>focallength</span><span> 55</span><span>height</span><span> 1024</span><span>fnumber</span><span> 5.6</span><span>exposuretime</span><span> 0.125</span><span>flash</span><span> 16</span><span>originaldate</span><span> 1/17/2017 4:31:55 PM</span><span>width</span><span> 1016</span><span>cameramodel</span><span> Canon EOS 70D</span></noscript>
-                <br>
-            </div>
-            <div class="col-lg-12" id="bottomBorder">
-                <h3>Rosali Castro</h3>
-                <div id="cp_widget_6eda1937-4d6f-4afd-b539-6cc85eaf9a79">...</div><script type="text/javascript">
-                var cpo = []; cpo["_object"] ="cp_widget_6eda1937-4d6f-4afd-b539-6cc85eaf9a79"; cpo["_fid"] = "AEBAU0tlWWEA";
-                var _cpmp = _cpmp || []; _cpmp.push(cpo);
-                (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-                    cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-                    var c = document.getElementsByTagName("script")[0];
-                    c.parentNode.insertBefore(cp, c); })(); </script><noscript>Powered by Cincopa <a href='https://www.cincopa.com/solution/enterprise'>Business Video</a> solution.<span>Rosali Castro</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 800</span><span>height</span><span> 783</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 800</span><span>height</span><span> 783</span><span>originaldate</span><span> 1/1/0001 6:00:00 AM</span><span>width</span><span> 800</span><span>height</span><span> 783</span><span>Apesar De Todo</span><span>Cansion De Amor</span><span>Borro Mi Pecado</span></noscript>
-                <br>
-            </div>
-
-
-
-            <div class="clearfix"></div>
+          </div>
         </div>
-    </div>
+      <div class="clearfix"></div>
+      </div>
+  </div>
 </div>
 
 
@@ -162,11 +152,5 @@
         </div>
     </div>
 </footer>
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

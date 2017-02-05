@@ -37,4 +37,151 @@
       <description>Traigan sus autos este Sabado para que sea lavado. El costo? Solo una donacion conforme a su Corazon. Todo sera con el proposito de recaudar fondos para el grupo de misioneras de Getsemani que salen pronto! Acompananos!</description>
     </title>
   </date>
+  <date value="2017-02-08">
+    <title value="Culto de Jovenes!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos para el primer servicio de Jovenes este 2017!</description>
+    </title>
+  </date>
+  <date value="2017-02-15">
+    <title value="Culto de Adolescente!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos para el primer servicio de Adolescentes este 2017!</description>
+    </title>
+  </date>
+  <date value="2017-02-22">
+    <title value="Culto de Niños!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos para el primer servicio de Niños este 2017!</description>
+    </title>
+  </date>
+  <date value="2017-03-01">
+    <title value="Culto de Caballeros!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Caballeros esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-03-08">
+    <title value="Culto de Damas!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por las Damas esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-03-15">
+    <title value="Culto de Jovenes!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Jovenes esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-03-22">
+    <title value="Culto de Adolescente!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Adolescente esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-03-29">
+    <title value="Culto de Caballeros!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Caballeros esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-04-05">
+    <title value="Culto de Damas!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por las Damas esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-04-12">
+    <title value="Culto de Jovenes!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Jovenes esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-04-19">
+    <title value="Culto de Niños!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Niños esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-04-26">
+    <title value="Culto de Caballeros!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Caballeros esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-05-03">
+    <title value="Culto de Damas!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Damas esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-05-10">
+    <title value="Culto de Jovenes!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Jovenes esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-05-17">
+    <title value="Culto de Adolescente!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Adolescente esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-05-24">
+    <title value="Culto de Caballeros!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Caballeros esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-05-31">
+    <title value="Culto de Damas!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por las Damas esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-06-07">
+    <title value="Culto de Jovenes!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Jovenes esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-06-14">
+    <title value="Culto de Niños!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Niños esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-06-21">
+    <title value="Culto de Caballeros!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por los Caballeros esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-06-28">
+    <title value="Culto de Damas!">
+      <startTime>07:30 PM</startTime>
+      <endTime>09:00 PM</endTime>
+      <description>Acompañanos a un servicio dirigido por las Damas esta noche!</description>
+    </title>
+  </date>
 </events>
