@@ -250,7 +250,7 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover { backgro
     html[data-useragent*="OS 7"] audio { width:546px; }
     html[data-useragent*="OS 8"] audio { width:550px; }
     html[data-useragent*="OS 9"] audio { width:550px; }
-    html[data-useragent*="Chrome"] audio { width:533px; }
+    html[data-useragent*="Chrome"] audio { width:540px; }
     html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:4px; width:545px; }
 }
 
@@ -265,7 +265,7 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover { backgro
     html[data-useragent*="OS 7"] audio { width:410px; }
     html[data-useragent*="OS 8"] audio { width:414px; }
     html[data-useragent*="OS 9"] audio { width:414px; }
-    html[data-useragent*="Chrome"] audio { width:397px; }
+    html[data-useragent*="Chrome"] audio { width:404px; }
     html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px; width:410px; }
     #npTitle { width:245px; }
 }
@@ -282,7 +282,7 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover { backgro
     html[data-useragent*="OS 7"] audio { width:290px; }
     html[data-useragent*="OS 8"] audio { width:294px; }
     html[data-useragent*="OS 9"] audio { width:294px; }
-    html[data-useragent*="Chrome"] audio { width:277px; }
+    html[data-useragent*="Chrome"] audio { width:301px; }
     html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:4px; width:290px; }
     #npTitle { width:167px; }
 }
@@ -293,13 +293,13 @@ html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover { backgro
     #album-art { height: 180px;  }
     #music-player { padding-left: 0px; }
     audio { width:220px; }
-    html[data-useragent*="MSIE 9.0"] audio { width:110px; }
-    html[data-useragent*="MSIE 10.0"] audio { width:117px; }
-    html[data-useragent*="rv:11.0"] audio { width:135px; }
+    html[data-useragent*="MSIE 9.0"] audio { width:190px; }
+    html[data-useragent*="MSIE 10.0"] audio { width:197px; }
+    html[data-useragent*="rv:11.0"] audio { width:195px; }
     html[data-useragent*="OS 7"] audio { width:130px; }
     html[data-useragent*="OS 8"] audio { width:134px; }
     html[data-useragent*="OS 9"] audio { width:134px; }
-    html[data-useragent*="Chrome"] audio { width:107px; }
+    html[data-useragent*="Chrome"] audio { width:227px; }
     html[data-useragent*="Chrome"][data-useragent*="Mobile"] audio { margin-left:0px; width:120px; }
     #npTitle { width:127px; padding-right: 10px;}
 }
