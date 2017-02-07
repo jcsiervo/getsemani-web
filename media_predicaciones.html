@@ -124,10 +124,12 @@
                     var plist = readPredicasXML();
                     var generateHere = document.getElementById("plList");
                     for(var i = 0; i < plist.length; ++i) {
+                      var zeroAdd = (i<9) ? '0' : '';
+
                       // dynamically create elements
                       var gen_html = '<li>' +
                         '<div class="plItem">' +
-                        '<div class="plNum">0' + (i+1) + '.</div>' +
+                        '<div class="plNum">' + zeroAdd + (i+1) + '.</div>' +
                         '<div class="plTitle">' + plist[i].name + '</div>' +
                         '<div class="plLength">' + plist[i].length + '</div>' +
                         '</div>' +

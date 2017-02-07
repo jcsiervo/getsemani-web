@@ -1,34 +1,122 @@
-<predicaciones>
-  <filename value="7_Armas_que_Satanas_usa_para_Destruir">
-    <displayname>7 Armas que Satanas usa Para Destruir</displayname>
-    <length>53:50</length>
+<musica>
+  <filename value="La Etiqueta - Bernardo Mateos">
+    <displayname>La Etiqueta - Bernardo Mateos</displayname>
+    <length>02:59</length>
+    <Album>La Etiqueta</Album>
+    <Artist>Bernardo Mateos</Artist>
   </filename>
-  <filename value="12_Senales_Antes_del_Fin">
-    <displayname>12 Senales Antes del Fin</displayname>
-    <length>59:44</length>
+  <filename value="Getsemani - Bernardo Mateos">
+    <displayname>Getsemani - Bernardo Mateos</displayname>
+    <length>04:22</length>
+    <Album>La Etiqueta</Album>
+  <Artist>Bernardo Mateos</Artist>
   </filename>
-  <filename value="El_dios_de_Este_Siglo">
-    <displayname>El dios de Este Siglo</displayname>
-    <length>44:42</length>
+  <filename value="Mundo Malo - Bernardo Mateos">
+    <displayname>Mundo Malo - Bernardo Mateos</displayname>
+    <length>03:15</length>
+    <Album>Mundo Malo</Album>
+    <Artist>Bernardo Mateos</Artist>
   </filename>
-  <filename value="Jesus_sus_Anos_de_Ministerio">
-    <displayname>Jesus sus Anos de Ministerio</displayname>
-    <length>49:57</length>
+  <filename value="Te Vengo A Decir- Bernardo Mateos">
+    <displayname>Te Vengo A Decir- Bernardo Mateos</displayname>
+    <length>02:52</length>
+    <Album>Mundo Malo</Album>
+    <Artist>Bernardo Mateos</Artist>
   </filename>
-  <filename value="La_Iglesia_Envejecente">
-    <displayname>La Iglesia Envejecente</displayname>
-    <length>50:10</length>
+  <filename value="Nada Oculto A Ti - Bernardo Mateos">
+    <displayname>Nada Oculto A Ti - Bernardo Mateos</displayname>
+    <length>04:55</length>
+    <Album>Nada Oculto A Ti</Album>
+    <Artist>Bernardo Mateos</Artist>
   </filename>
-  <filename value="La_Predica_de_Juan_el_Bautista">
-    <displayname>La Predica de Juan el Bautista</displayname>
-    <length>50:21</length>
+  <filename value="No Te Soltare - Bernardo Mateos">
+    <displayname>No Te Soltare - Bernardo Mateos</displayname>
+    <length>03:15</length>
+    <Album>Nada Oculto A Ti</Album>
+    <Artist>Bernardo Mateos</Artist>
   </filename>
-    <filename value="Matrimonios-Metodos_Diferentes_1">
-    <displayname>Matrimonios - Metodos Diferentes pt.1</displayname>
-    <length>01:11:35</length>
+  <filename value="Soberano Senor - Bernardo Mateos">
+    <displayname>Soberano Senor - Bernardo Mateos</displayname>
+    <length>03:00</length>
+    <Album>Soberano Senor</Album>
+    <Artist>Bernardo Mateos</Artist>
   </filename>
-    <filename value="Matrimonios-Metodos_Diferentes_2">
-    <displayname>Matrimonios - Metodos Diferentes pt.2</displayname>
-    <length>46:12</length>
+  <filename value="Siempre Agradecido - Bernardo Mateos">
+    <displayname>Siempre Agradecido - Bernardo Mateos</displayname>
+    <length>03:57</length>
+    <Album>Soberano Senor</Album>
+    <Artist>Bernardo Mateos</Artist>
   </filename>
-</predicaciones>
+  <filename value="Como El Pastor - Basan">
+    <displayname>Como El Pastor - Basan</displayname>
+    <length>03:13</length>
+    <Album>Fantasias</Album>
+    <Artist>J A Parrilla</Artist>
+  </filename>
+  <filename value="Viviendo Fantasias - Basan">
+    <displayname>Viviendo Fantasias - Basan</displayname>
+    <length>03:57</length>
+    <Album>Fantasias</Album>
+    <Artist>J A Parrilla</Artist>
+  </filename>
+  <filename value="Es Jesus (Bachata) - J A Parrilla">
+    <displayname>Es Jesus (Bachata) - J A Parrilla</displayname>
+    <length>03:37</length>
+    <Album>Nueva Cancion</Album>
+    <Artist>J A Parrilla</Artist>
+  </filename>
+  <filename value="Nueva Cancion - J A Parrilla">
+    <displayname>Nueva Cancion - J A Parrilla</displayname>
+    <length>03:00</length>
+    <Album>Nueva Cancion</Album>
+    <Artist>J A Parrilla</Artist>
+  </filename>
+  <filename value="Postrada Ante Tu Altar - Juana Zaragoza">
+    <displayname>Postrada Ante Tu Altar - Juana Zaragoza</displayname>
+    <length>04:51</length>
+    <Album>Postrada Ante Tu Altar</Album>
+    <Artist>Juana Zaragoza</Artist>
+  </filename>
+  <filename value="Al Estar Aqui - Juana Zaragoza">
+    <displayname>Al Estar Aqui - Juana Zaragoza</displayname>
+    <length>04:16</length>
+    <Album>Postrada Ante Tu Altar</Album>
+    <Artist>Juana Zaragoza</Artist>
+  </filename>
+  <filename value="Razon De Mi Adoracion - Juana Zaragoza">
+    <displayname>Razon De Mi Adoracion - Juana Zaragoza</displayname>
+    <length>03:22</length>
+    <Album>Razon De Mi Adoracion</Album>
+    <Artist>Juana Zaragoza</Artist>
+  </filename>
+  <filename value="Vencio La Muerte - Juana Zaragoza">
+    <displayname>Vencio La Muerte - Juana Zaragoza</displayname>
+    <length>02:56</length>
+    <Album>Razon De Mi Adoracion</Album>
+    <Artist>Juana Zaragoza</Artist>
+  </filename>
+  <filename value="Rompeme - Juana Zaragoza feat. Esmeralda">
+    <displayname>Rompeme - Juana Zaragoza feat. Esmeralda</displayname>
+    <length>03:35</length>
+    <Album>Y Eres Tu</Album>
+    <Artist>Juana Zaragoza</Artist>
+  </filename>
+  <filename value="Y Eres Tu - Juana Zaragoza">
+    <displayname>Y Eres Tu - Juana Zaragoza</displayname>
+    <length>03:39</length>
+    <Album>Y Eres Tu</Album>
+    <Artist>Juana Zaragoza</Artist>
+  </filename>
+  <filename value="Quiero Darte El Corazon - Yolani">
+    <displayname>Quiero Darte El Corazon - Yolani</displayname>
+    <length>03:11</length>
+    <Album>Quiero Darte El Corazon</Album>
+    <Artist>Yolani</Artist>
+  </filename>
+  <filename value="Gracias Te Doy Senor - Yolani">
+    <displayname>Gracias Te Doy Senor - Yolani</displayname>
+    <length>03:07</length>
+    <Album>Quiero Darte El Corazon</Album>
+    <Artist>Yolani</Artist>
+  </filename>
+</musica>

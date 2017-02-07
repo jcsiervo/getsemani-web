@@ -90,7 +90,7 @@ p a,p a:visited { line-height:inherit; }*/
 
 /* Default / Desktop / Firefox */
 audio { margin:0 15px 0 14px; width:670px; }
-#mainwrap { /* add box-shadow or other styles here */color: darkgreen; }
+#mainwrap { /* add box-shadow or other styles here */color: darkgreen; font-weight: bold;}
 #audiowrap { background-color:#231F20;  margin:0 auto; min-height: 200px; padding-bottom: 10px;}
 #plwrap { margin:0 auto; }
 
@@ -126,7 +126,7 @@ audio { margin:0 15px 0 14px; width:670px; }
 .plNum { padding-left:21px; width:25px; }
 .plLength { padding-left:21px; position:absolute; right:21px; top:0; }
 .plSel,.plSel:hover { background-color:#262223!important; cursor:default!important; }
-a[id^="btn"] { background-color:#231F20; color:green; cursor:pointer; font-size:50px; margin:0; padding:0 27px 11px; text-decoration:none; }
+a[id^="btn"] { background-color:#e1e1e1; color:#e1e1e1; cursor:pointer; font-size:50px; margin:0; padding:0 27px 11px; text-decoration:none; }
 a[id^="btn"]:last-child { margin-left:-4px; }
 a[id^="btn"]:hover,a[id^="btn"]:active { background-color:#262223; }
 a[id^="btn"]::-moz-focus-inner { border:0; padding:0; }
@@ -138,9 +138,9 @@ html[data-useragent*="MSIE 9.0"] #tracks { min-height:57px; top:5px; }
 html[data-useragent*="MSIE 9.0"] a[id^="btn"] { background-color:#000; }
 html[data-useragent*="MSIE 9.0"] a[id^="btn"]:hover { background-color:#080808; }
 html[data-useragent*="MSIE 9.0"] #plList li { background-color:#000; }
-html[data-useragent*="MSIE 9.0"] #plList li:hover { background-color:#080808; }
+html[data-useragent*="MSIE 9.0"] #plList li:hover { background-color:#e1e1e1; }
 html[data-useragent*="MSIE 9.0"] .plSel,
-html[data-useragent*="MSIE 9.0"] .plSel:hover { background-color:#080808!important; }
+html[data-useragent*="MSIE 9.0"] .plSel:hover { background-color:#e1e1e1!important; }
 
 /* IE 10 */
 html[data-useragent*="MSIE 10.0"] audio { margin-left:6px; width:687px; }
@@ -149,9 +149,9 @@ html[data-useragent*="MSIE 10.0"] #tracks { min-height:60px; top:8px; }
 html[data-useragent*="MSIE 10.0"] a[id^="btn"] { background-color:#000; }
 html[data-useragent*="MSIE 10.0"] a[id^="btn"]:hover { background-color:#080808; }
 html[data-useragent*="MSIE 10.0"] #plList li { background-color:#000; }
-html[data-useragent*="MSIE 10.0"] #plList li:hover { background-color:#080808; }
+html[data-useragent*="MSIE 10.0"] #plList li:hover { background-color:#e1e1e1; }
 html[data-useragent*="MSIE 10.0"] .plSel,
-html[data-useragent*="MSIE 10.0"] .plSel:hover { background-color:#080808!important; }
+html[data-useragent*="MSIE 10.0"] .plSel:hover { background-color:#e1e1e1!important; }
 
 /* IE 11 */
 html[data-useragent*="rv:11.0"] audio { margin-left:2px; width:695px; }
@@ -160,9 +160,9 @@ html[data-useragent*="rv:11.0"] #tracks { min-height:60px; top:8px; }
 html[data-useragent*="rv:11.0"] a[id^="btn"] { background-color:#000; }
 html[data-useragent*="rv:11.0"] a[id^="btn"]:hover { background-color:#080808; }
 html[data-useragent*="rv:11.0"] #plList li { background-color:#000; }
-html[data-useragent*="rv:11.0"] #plList li:hover { background-color:#080808; }
+html[data-useragent*="rv:11.0"] #plList li:hover { background-color:#e1e1e1; }
 html[data-useragent*="rv:11.0"] .plSel,
-html[data-useragent*="rv:11.0"] .plSel:hover { background-color:#080808!important; }
+html[data-useragent*="rv:11.0"] .plSel:hover { background-color:#e1e1e1!important; }
 
 /* All Apple Products */
 html[data-useragent*="Apple"] audio { margin:0; width:100%; }
@@ -171,9 +171,9 @@ html[data-useragent*="Apple"] #tracks { min-height:64px; top:12px; }
 html[data-useragent*="Apple"] a[id^="btn"] { background-color:#000; }
 html[data-useragent*="Apple"] a[id^="btn"]:hover { background-color:#080808; }
 html[data-useragent*="Apple"] #plList li { background-color:#000; }
-html[data-useragent*="Apple"] #plList li:hover { background-color:#080808; }
+html[data-useragent*="Apple"] #plList li:hover { background-color:#e1e1e1; }
 html[data-useragent*="Apple"] .plSel,
-html[data-useragent*="Apple"] .plSel:hover { background-color:#080808!important; }
+html[data-useragent*="Apple"] .plSel:hover { background-color:#e1e1e1!important; }
 
 /* IOS 7 */
 html[data-useragent*="OS 7"] body { color:#373837; }
@@ -214,26 +214,26 @@ html[data-useragent*="OS 9"] .plSel:hover { background-color:#eee!important; }
 /* Chrome */
 html[data-useragent*="Chrome"] body { color:#5a5a5a; }
 html[data-useragent*="Chrome"] audio { margin-left:9px; width:677px; }
-html[data-useragent*="Chrome"] #audiowrap { background-color:#fafafa; }
+html[data-useragent*="Chrome"] #audiowrap { background-color:#000; }
 html[data-useragent*="Chrome"] #tracks { min-height:64px; top:12px; }
-html[data-useragent*="Chrome"] a[id^="btn"] { background-color:#fafafa; color:#5a5a5a; }
-html[data-useragent*="Chrome"] a[id^="btn"]:hover { background-color:#eee; }
-html[data-useragent*="Chrome"] #plList li { background-color:#fafafa; }
-html[data-useragent*="Chrome"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="Chrome"] a[id^="btn"] { background-color:#000; color:#5a5a5a; }
+html[data-useragent*="Chrome"] a[id^="btn"]:hover { background-color:#000; }
+html[data-useragent*="Chrome"] #plList li { background-color:#000; }
+html[data-useragent*="Chrome"] #plList li:hover { background-color:#e1e1e1; }
 html[data-useragent*="Chrome"] .plSel,
-html[data-useragent*="Chrome"] .plSel:hover { background-color:#eee!important; }
+html[data-useragent*="Chrome"] .plSel:hover { background-color:#e1e1e1!important; }
 
 /* Chrome / Android / Tablet */
-html[data-useragent*="Chrome"][data-useragent*="Android"] body { color:#373837; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] body { color:#5a5a5a; }
 html[data-useragent*="Chrome"][data-useragent*="Android"] audio { margin-left:4px; width:689px; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] #audiowrap { background-color:#fafafa; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #audiowrap { background-color:#000; }
 html[data-useragent*="Chrome"][data-useragent*="Android"] #tracks { min-height:75px; top:23px; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"] { background-color:#fafafa; color:#373837; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"]:hover { background-color:#eee; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li { background-color:#fafafa; }
-html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li:hover { background-color:#eee; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"] { background-color:#000; color:#373837; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] a[id^="btn"]:hover { background-color:#000; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li { background-color:#000; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] #plList li:hover { background-color:#e1e1e1; }
 html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel,
-html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover { background-color:#eee!important; }
+html[data-useragent*="Chrome"][data-useragent*="Android"] .plSel:hover { background-color:#e1e1e1!important; }
 
 
 /* Audio Player Media Queries

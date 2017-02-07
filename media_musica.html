@@ -93,48 +93,51 @@
         <hr>
       </div>
       <div class="col-lg-12" id="bottomBorder">
-         <br>
-          <div class="containerPlayer">
-            <div class="column add-bottom">
-              <div id="mainwrap">
-                <div id="nowPlay">
-                  <span class="left" id="npAction">Paused...</span>
-                  <span class="right" id="npTitle"></span>
+        <br>
+        <div class="containerPlayer">
+          <div class="column add-bottom">
+            <div id="mainwrap">
+              <div id="nowPlay">
+                <span class="left" id="npAction">Paused...</span>
+                <span class="right" id="npTitle"></span>
+              </div>
+              <div id="audiowrap">
+                <div id="audio0">
+                  <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
                 </div>
-                <div id="audiowrap">
-                  <div id="audio0">
-                    <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
-                  </div>
-                  <div id="tracks">
-                    <a id="btnPrev">&laquo;</a>
-                    <a id="btnNext">&raquo;</a>
-                  </div>
-                  <div class="text-center">
-                    <img class="img-responsive img-thumbnail" id="album-art" src="media/Musica/Artwork/Bernardo_Mateos - Mundo Malo.jpg" alt="">
-                  </div>
+                <div id="tracks">
+                  <a id="btnPrev">&laquo;</a>
+                  <a id="btnNext">&raquo;</a>
                 </div>
-                <div id="plwrap">
-                  <ul id="plList"></ul>
-                  <script type="text/javascript">
-                    var plist = readPredicasXML();
-                    var generateHere = document.getElementById("plList");
-                    for(var i = 0; i < plist.length; ++i) {
-                      // dynamically create elements
-                      var gen_html = '<li>' +
-                          '<div class="plItem">' +
-                          '<div class="plNum">0' + (i+1) + '.</div>' +
-                          '<div class="plTitle">' + plist[i].name + '</div>' +
-                          '<div class="plLength">' + plist[i].length + '</div>' +
-                          '</div>' +
-                          '</li>';
-                      generateHere.innerHTML += gen_html;
-                    }
-                  </script>
+                <div class="text-center" id="generate-artwork">
+                  <img class="img-responsive img-thumbnail" id="album-art" src="media/Musica/Artwork/Bernardo Mateos/La Etiqueta.jpg" alt="">
                 </div>
+              </div>
+              <div id="plwrap">
+                <ul id="plList"></ul>
+                <script type="text/javascript">
+                  var plist = readMusicXML();
+                  var generateHere = document.getElementById("plList");
+                  for(var i = 0; i < plist.length; ++i) {
+                    var zeroAdd = (i<9) ? '0' : '';
+
+                    // dynamically create elements
+                    var gen_html = '<li>' +
+                        '<div class="plItem">' +
+                        '<div class="plNum">' + zeroAdd + (i+1) + '.</div>' +
+                        '<div class="plTitle">' + plist[i].name + '</div>' +
+                        '<div class="plLength">' + plist[i].length + '</div>' +
+                        '</div>' +
+                        '</li>';
+                    generateHere.innerHTML += gen_html;
+                  }
+
+                </script>
               </div>
             </div>
           </div>
         </div>
+      </div>
       <div class="clearfix"></div>
       </div>
   </div>
