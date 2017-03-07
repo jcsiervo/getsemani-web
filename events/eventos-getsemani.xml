@@ -58,6 +58,13 @@
       <description>Acompañanos para el primer servicio de Niños este 2017!</description>
     </title>
   </date>
+  <date value="2017-02-26">
+    <title value="Retiro de Caballeros en Ayuno">
+      <startTime>08:00 AM</startTime>
+      <endTime>02:00 PM</endTime>
+      <description>Un Retiro de Caballeros y ayuno, todos invitados para convivir, gozar, y dialogar sobre los diversos temas que enfrentan los caballeros hoy en dia.</description>
+    </title>
+  </date>
   <date value="2017-03-01">
     <title value="Culto de Caballeros!">
       <startTime>07:30 PM</startTime>
@@ -70,6 +77,13 @@
       <startTime>07:30 PM</startTime>
       <endTime>09:00 PM</endTime>
       <description>Acompañanos a un servicio dirigido por las Damas esta noche!</description>
+    </title>
+  </date>
+  <date value="2017-03-11">
+    <title value="Tardeada">
+      <startTime>10:00 AM</startTime>
+      <endTime>04:00 PM</endTime>
+      <description>Una evento al aire libre con musica, todo tipo te comida y antojitos de diversas regiones, juegos para los ninos, y convivio de la comunidad.</description>
     </title>
   </date>
   <date value="2017-03-15">
