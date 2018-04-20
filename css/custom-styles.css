@@ -215,17 +215,16 @@ a{transition:all 1s; }
     position: relative;
     z-index: 1;
     border: none;
-
-
     background: #373435;
     box-shadow: -8px 8px 0px 1px rgba(0, 0, 0, 0.1);
     margin-right: 30px;}
+
     .featured-block .block{}
     .featured-block .block h5{color: #373435; font-size: 16px; line-height: 22px; font-family: 'source_sans_probold'; text-transform: uppercase; padding-bottom: 15px;}
 
     .featured-items{overflow: hidden; margin: 0 auto; display: inline-block; padding-bottom: 10px;}
     .featured-items ul{margin: 0 auto; padding-left: 0;}
-    .featured-items ul li{list-style: none;width: 23.076923076923076923076923076923%; margin-right: 2.5641025641025641025641025641026%; display: inline-block !important;}
+    .featured-items ul li{list-style: none;width: 93.076923076923076923076923076923%; margin-right: 0.5641025641025641025641025641026%; display: inline-block !important;}
     .featured-items ul li:nth-last-child(1){margin-right: 0; }
     .featured-items ul li .item{text-align: left;   overflow: hidden; padding-top: 35px; padding-bottom: 30px; border-radius: 5px 0 5px 5px; 
             background: #e2e2e2;box-shadow: -8px 8px 0px 1px rgba(0, 0, 0, 0.1);}

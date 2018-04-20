@@ -20,6 +20,14 @@
   <link href="css/image-effects.css" rel="stylesheet">
   <link href="css/component.css" rel="stylesheet">
 
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/imagesloaded.js"></script>
+  <script src="js/classie.js"></script>
+  <script src="js/AnimOnScroll.js"></script>
+
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
@@ -35,6 +43,16 @@
 </head>
 
 <body>
+
+  <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.12&appId=122342261809843&autoLogAppEvents=1';
+    fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="brand" id ="emblem">Ministerios Getsemani</div>
     <div class="address-bar">2585 W. Orange Blossom Trail (<i>Hwy 441</i>) &nbsp|&nbsp Apopka, FL 32712 </div>
@@ -104,7 +122,7 @@
             <div class="carousel-caption">
               <h2>Templo Getsemani</h2>
               <h1>Con amor a las naciones</h1>
-              <a href="#" class="btn"> Mas Informacion</a>
+              <a href="informacion.html" class="btn"> Mas Informacion</a>
             </div>
           </div>
           <div class="item">
@@ -160,9 +178,9 @@
 
             <div class="main-title spacing-bt">
               <ul class="grid effect-8" id="grid">
-                <li><h1>Vivamus vest</h1>
-                  <h4>Sed adipiscing ornare risus. Morbi est est, blandit sit amet, sagittis vel, euismod vel, velit. <br>
-                    Pellentesque egestas sem. Suspendisse commodo ullamcorper magna..</h4></li>
+                <li><h1>Conoce La Iglesia y Cultura</h1>
+                  <h4>Nuestra Iglesia esta dedicada a compartir el amor a las naciones, empezando con nuestra comunidad. <br>
+                    Somos una familia compuesta de diversas regiones latino americanas unidos por una misma fe en Jesus...</h4></li>
               </ul>
             </div>
 
@@ -173,9 +191,9 @@
                     <i class="fw-icon-pencil icon"></i>
                   </div>
                   <div class="block">
-                    <h5>Fusce pellentesque<br>suscipit nibh</h5>
-                    <p>Sed egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero,  id... </p>
-                    <a href="#" class="more">more info <i class="fw-icon-chevron-right"></i></a>
+                    <h5>Galeria de<br>Eventos y Actividades</h5>
+                    <p>Nos gusta gozarnos y hacer diversos eventos y convivios como la familia en Cristo que somos ... </p>
+                    <!--<a href="#" class="more">mas informacion <i class="fw-icon-chevron-right"></i></a>-->
                   </div>
                 </div>
               </div>
@@ -185,9 +203,17 @@
                     <i class="fw-icon-group icon"></i>
                   </div>
                   <div class="block">
-                    <h5>Integer vitae libero<br>ac risus egestas</h5>
-                    <p>Ced egestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero... </p>
-                    <a href="#" class="more">more info <i class="fw-icon-chevron-right"></i></a>
+                    <h5>Siguenos en <br>Facebook</h5>
+                    <p>Siguenos en facebook con predicaciones en vivo todo los Viernes y Domingos ... </p>
+                    <div class="fb-like"
+                         data-href="https://www.facebook.com/conexion.juvenil.3158"
+                         data-layout="standard"
+                         data-action="like"
+                         data-size="small"
+                         data-show-faces="true"
+                         data-share="true">
+                    </div>
+                    <!--<a href="#" class="more">mas informacion <i class="fw-icon-chevron-right"></i></a>-->
                   </div>
                 </div>
               </div>
@@ -197,9 +223,9 @@
                     <i class="fw-icon-wrench icon"></i>
                   </div>
                   <div class="block">
-                    <h5>Vestibulum commodo<br>felis quis tort</h5>
-                    <p>Tegestas, ante et vulputate volutpat, eros pede semper est, vitae luctus metus libero eu augue. Morbi purus libero, fauc... </p>
-                    <a href="#" class="more">more info <i class="fw-icon-chevron-right"></i></a>
+                    <h5 style="color:#ed3237;">Subscribete a Nuestra<br>Pagina de Youtube</h5>
+                    <p> Ahora puedes ver todas los vides de predicaciones pasadas ... </p>
+                    <!--<a href="#" class="more">mas informacion <i class="fw-icon-chevron-right"></i></a>-->
                   </div>
                 </div>
               </div>
@@ -217,40 +243,75 @@
                 </li>
               </ul>
             </div>
+            <div class="row">
+              <div class="featured-block">
+                <div class="col-md-4">
             <div class="featured-items">
               <ul class="grid effect-2" id="grid">
                 <li>
                   <div class="item">
                     <h5>Fundamentos<br> bases biblicas</h5>
-                    <div class="grow">
+                    <div class="grow"  id="use-me">
                       <img src="img/preview_scripture.jpg" alt="">
                     </div>
-                    <p>Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.</p>
-                    <p><a href="#" class="more">mas informacion <i class="fw-icon-chevron-right"></i></a></p>
+                    <p> Aprended sobre nuestros fundamentos biblicos ... </p>
+                    <p><a href="#" class="more">mas informacion </a></p>
                   </div>
                 </li>
+              </ul>
+            </div>
+                </div>
+              </div>
+              <div class="featured-block">
+                <div class="col-md-4">
+            <div class="featured-items">
+              <ul class="grid effect-2" id="grid">
                 <li>
                   <div class="item">
                     <h5>Calendario<br> de Eventos</h5>
                     <div class="grow">
                       <img src="img/preview_events.jpg" alt="">
                     </div>
-                    <p>Suspendisse mauris. Fusce accumsan mollis eros. Pellentesque a diam sit amet mi ullamcorper vehicula. Integer adipiscing risus</p>
-                    <p><a href="#" class="more">mas informacion <i class="fw-icon-chevron-right"></i></a></p>
+                    <p> Visitanos en unos de nuestros proximos events ...</p>
+                    <p><a href="#" class="more">mas informacion </a></p>
                   </div>
                 </li>
+            </ul>
+          </div> </div> </div>
+                  <div class="featured-block">
+                    <div class="col-md-4">
+            <div class="featured-items">
+              <ul class="grid effect-2" id="grid">
                 <li>
                   <div class="item">
                     <h5>Ministerio<br> de Radio</h5>
                     <div class="grow">
                       <img src="img/preview_radio.jpg" alt="">
                     </div>
-                    <p>Mauris nibh felis, adipiscing varius, adipiscing in, lacinia vel, tellus. Suspendisse ac urna. Etiam pellentesque mauris ut lectus.</p>
-                    <p><a href="#" class="more">mas informacion <i class="fw-icon-chevron-right"></i></a></p>
+                    <p> Sintonizanos en nuestra estacion local de Radio ...</p>
+                    <!--<div id="success"></div>
+                    <b>Error Response:</b>
+                    <div id="error"></div>
+                    <script>
+                      $( "#success" ).load( "eventos.html #generate-here", function( response, status, xhr ) {
+                        if ( status == "error" ) {
+                          alert("Error mi amigo");
+                          var msg = "Para ver los proximos eventos visite: ";
+                          $( "#error" ).html( msg + xhr.status + " " + xhr.statusText );
+                        }
+                      });
+                    </script>-->
+                    <!--<p>Mauris </p>-->
+                   <!-- <a href="http://www.ministeriosgetsemani.org/eventos.html#generate-here">Link text</a>-->
+                    <p><a href="#" class="more">mas informacion </a></p>
                   </div>
                 </li>
               </ul>
             </div>
+                    </div> </div>
+            </div>
+
+
           </div>
 
           <div class="ruler"></div>
@@ -297,13 +358,9 @@
     </footer>
 
     <!-- jQuery & Bootstrap Core JavaScript -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/imagesloaded.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/AnimOnScroll.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <!--<script src="js/jquery-3.1.1.min.js"></script>-->
+
 
     <!-- Script to Activate the Carousel -->
     <script>
