@@ -17,6 +17,117 @@
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/responsive-calender.css" rel="stylesheet">
 
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+/* Full-width input fields */
+input[type=date], input[type=text], input[type=password], textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #008CBA;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #424949;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d;
+    padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+
   <!-- Javascript -->
   <script src="js/jquery.js"></script>
   <script src="js/bootstrap.min.js"></script>
@@ -96,8 +207,55 @@
 <div class="container">
   <div class="row">
     <div class="box">
+
+      <div class="text-right">
+        <button onclick="document.getElementById('id01').style.display='block'" style="color:white; background-color:#008CBA; border-radius:4px; padding: 8px 20px; width:auto;">
+          A&#xF1;adir Evento
+        </button>
+
+          <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
+
+          <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <form class="modal-content" method="post" action="php/add-event.php">
+              <div class="container">
+                <h2>Nuevo Evento</h2>
+                <p>Favor de llenar toda la informacion.</p>
+                <hr>
+                <label for="event-date"><b>Fecha del Evento</b></label>
+                <input id="when" type="date" placeholder="YYYY-MM-DD" name="event-date" required>
+                <label for="event-title"><b>Titulo del Evento</b></label>
+                <input type="text" placeholder="Titulo de mi evento ..." name="event-title" required>
+                <label for="event-details"><b>Detalles</b></label>
+                <textarea rows="6" placeholder="Los detalles del evento (incluyendo horarios si es aplicable)..." name="event-details" required></textarea>
+                <label for="psw"><b>Contrasea&#xF1;a</b></label>
+                <input type="password" placeholder="contrasea&#xF1;a" name="psw" required>
+                <p>Favor de revisar todos los detalles del nuevo evento antes de a&#xF1;adir. Gracias!</p>
+                <div class="clearfix">
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                  <button type="submit" class="signupbtn">A&#xF1;adir Evento</button>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <script>
+          // Get the modal
+          var modal = document.getElementById('id01');
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function(event) {
+              if (event.target == modal) {
+                  modal.style.display = "none";
+              }
+          }
+          </script>
+
+
+      </div>
+      
       <div class="container" style="padding-right: 40px;">
-        <h2 class="intro-text text-center" id="bottomTopBorder">Calendario de <strong>Eventos</strong></h2>
+        <h2 class="intro-text text-center" id="bottomTopBorder">Calendario de <strong>Eventos</strong></h2>        
         <br>
         <br>
         <!-- Responsive calendar - START -->
@@ -163,7 +321,6 @@
       </script>
     </div>
   </div>
-
     <div class="row">
     <div class="box">
       <div class="col-lg-12" id="generate-here">

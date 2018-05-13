@@ -93,67 +93,17 @@
 
 <div class="container">
 <div class="row">
-    <div class="box">
-        <div class="col-lg-12">
-            <hr>
-            <h2 class="intro-text text-center">
-                Escucha <strong>Palabra de Vida</strong>
-            </h2>
-            <hr>
-        </div>
-        <div class="col-lg-12" id="bottomBorder">
-            <h3>Predicaciones</h3>
-            <p>Ahora puedes escuchar predicaciones de diversos temas.</p>
-          <br>
-        </div>
-        <div class="col-lg-12" id="bottomBorder">
-            <br>
-          <div class="containerPlayer">
-            <div class="column add-bottom">
-              <div id="mainwrap">
-                <div id="nowPlay">
-                  <span class="left" id="npAction">Paused...</span>
-                  <span class="right" id="npTitle"></span>
-                </div>
-                <div id="audiowrap">
-                  <div id="audio0">
-                    <audio preload id="audio1" controls="controls">Your browser does not support HTML5 Audio!</audio>
-                  </div>
-                  <div id="tracks">
-                    <a id="btnPrev">&laquo;</a>
-                    <a id="btnNext">&raquo;</a>
-                  </div>
-                </div>
-                <div id="plwrap">
-                  <ul id="plList"></ul>
-                  <script type="text/javascript">
-                    var plist = readPredicasXML();
-                    var generateHere = document.getElementById("plList");
-                    for(var i = 0; i < plist.length; ++i) {
-                      var zeroAdd = (i<9) ? '0' : '';
-
-                      // dynamically create elements
-                      var gen_html = '<li>' +
-                        '<div class="plItem">' +
-                        '<div class="plNum">' + zeroAdd + (i+1) + '.</div>' +
-                        '<div class="plTitle">' + plist[i].name + '</div>' +
-                        '<div class="plLength">' + plist[i].length + '</div>' +
-                        '</div>' +
-                        '</li>';
-                      generateHere.innerHTML += gen_html;
-                    }
-                  </script>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="clearfix"></div>
+  <div class="box">
+    <div class="col-lg-12 text-center">
+      <hr>
+        <h2 class="intro-text text-center">Sigue nuestro canal de youtube <br><a href="https://www.youtube.com/channel/UCcd88wHGScJloNzSWzSyZCg">Ministerios Getsemani Apopka</a></h2>
+        <hr>
+      <iframe width="960" height="455" src="https://www.youtube.com/embed/videoseries?list=PLk-oetOxs5sT66N2IHIReKHbkMzQw4A3u" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+  </div>
 </div>
 </div>
-</div>
-
+<div class="clearfix"></div>
 
 <footer id="footerContainer">
     <div class="container">
