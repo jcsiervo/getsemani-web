@@ -237,9 +237,9 @@ a{transition:all 1s; }
     .featured-items ul li .item img{padding-bottom: 25px;}
     .featured-items ul li .item p{padding: 0 30px; padding-bottom: 15px;}
 
-    .tags{ display: inline-block; padding-top:15px; width:40%;}
+    .tags{ display: inline-block; padding-top:15px; width:50%;}
     .tags h5{color: #ed3237; font-size: 16px; line-height: 22px;font-family: 'source_sans_probold'; text-transform:uppercase;}
-    .tags .btn{box-shadow: -4px 4px 0px 1px rgba(0, 0, 0, 0.1); color: #373435; text-transform: uppercase; font-family: 'source_sans_probold';font-size: 16px; padding: 6px 10px;
+    .tags .btn{box-shadow: -4px 4px 0px 1px rgba(0, 0, 0, 0.1); color: #373435; text-transform: uppercase; font-family: 'source_sans_probold';font-size: 1em; padding: 6px 10px;
 	border-radius: 5px; border: 1px solid #c2c2c2;background:#ebebeb;margin-right: 1.5%;
 margin-bottom: 10px;}
 	.tags .btn:hover{background:#373435; color:#ebebeb;}

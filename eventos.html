@@ -8,125 +8,15 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Getsemani Oficial</title>
+    <title>Getsemani Oficial</title>
 
-  <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link href="css/custom.css" rel="stylesheet">
   <link href="css/responsive-calender.css" rel="stylesheet">
-
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box}
-/* Full-width input fields */
-input[type=date], input[type=text], input[type=password], textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    display: inline-block;
-    border: none;
-    background: #f1f1f1;
-}
-
-/* Add a background color when the inputs get focus */
-input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #008CBA;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    opacity: 0.9;
-}
-
-button:hover {
-    opacity:1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-    padding: 14px 20px;
-    background-color: #424949;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-    padding: 16px;
-}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: #474e5d;
-    padding-top: 50px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* Style the horizontal ruler */
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-}
- 
-/* The Close Button (x) */
-.close {
-    position: absolute;
-    right: 35px;
-    top: 15px;
-    font-size: 40px;
-    font-weight: bold;
-    color: #f1f1f1;
-}
-
-.close:hover,
-.close:focus {
-    color: #f44336;
-    cursor: pointer;
-}
-
-/* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
-       width: 100%;
-    }
-}
-</style>
+  <link href="css/events-modal.css" rel="stylesheet">
 
   <!-- Javascript -->
   <script src="js/jquery.js"></script>
@@ -138,21 +28,20 @@ hr {
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
 
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
+
 <body>
 
-<div class="brand" id ="emblem">Ministerios Getsemani</div>
-<div class="address-bar">2585 W. Orange Blossom Trail (<i>Hwy 441</i>) &nbsp|&nbsp Apopka, FL 32712 </div>
+    <div class="brand" id ="emblem">Ministerios Getsemani</div>
+    <div class="address-bar">2585 W. Orange Blossom Trail (<i>Hwy 441</i>) &nbsp|&nbsp Apopka, FL 32712 </div>
 
-
-<!-- Navigation -->
+   <!-- Navigation -->
     <nav class="navbar navbar-default" role="navigation" id="navContainer">
       <div class="container" >
           <!-- Brand and toggle get grouped for better mobile display -->
@@ -169,12 +58,12 @@ hr {
           <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="nav navbar-nav">
-            <li><a class="active" href="index.html">Pagina Principal</a></li>
+            <li><a href="index.html">Pagina Principal</a></li>
             <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">Informacion<span class="caret"></span></a>
               <ul class="dropdown-menu" id="dropdownOverride">
                 <li><a href="informacion.html">Sobre Nosotros</a></li>
-                <li><a href="#">Eventos</a></li>
+                <li><a class="active" href="eventos.html">Eventos</a></li>
                 <li><a href="ministerios.html">Ministerios</a></li>
               </ul>
             </li>
@@ -182,7 +71,6 @@ hr {
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">Misiones<span class="caret"></span></a>
                 <ul class="dropdown-menu" id="dropdownOverride">
                     <li><a href="mision_leesburg.html">Leesburg</a></li>
-                    <li role="presentation" class="divider"></li>
                     <li><a href="mision_deland.html">Deland</a></li>
                 </ul>
             </li>
@@ -204,18 +92,7 @@ hr {
     </nav>
 
 
-<div class="container">
-  <div class="row">
-    <div class="box">
-
-      <div class="text-right">
-        <button onclick="document.getElementById('id01').style.display='block'" style="color:white; background-color:#008CBA; border-radius:4px; padding: 8px 20px; width:auto;">
-          A&#xF1;adir Evento
-        </button>
-
-          <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
-
-          <div id="id01" class="modal">
+    <div id="id01" class="modal" style="font-family: Arial, Helvetica, sans-serif;}* {box-sizing: border-box">
             <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             <form class="modal-content" method="post" action="php/add-event.php">
               <div class="container">
@@ -223,7 +100,7 @@ hr {
                 <p>Favor de llenar toda la informacion.</p>
                 <hr>
                 <label for="event-date"><b>Fecha del Evento</b></label>
-                <input id="when" type="date" placeholder="YYYY-MM-DD" name="event-date" required>
+                <input type="date" placeholder="YYYY-MM-DD" name="event-date" required>
                 <label for="event-title"><b>Titulo del Evento</b></label>
                 <input type="text" placeholder="Titulo de mi evento ..." name="event-title" required>
                 <label for="event-details"><b>Detalles</b></label>
@@ -232,8 +109,8 @@ hr {
                 <input type="password" placeholder="contrasea&#xF1;a" name="psw" required>
                 <p>Favor de revisar todos los detalles del nuevo evento antes de a&#xF1;adir. Gracias!</p>
                 <div class="clearfix">
-                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-                  <button type="submit" class="signupbtn">A&#xF1;adir Evento</button>
+                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="evtbutton cancelbtn">Cancel</button>
+                  <button type="submit" class="evtbutton signupbtn">A&#xF1;adir Evento</button>
                 </div>
               </div>
             </form>
@@ -251,6 +128,14 @@ hr {
           }
           </script>
 
+    <div class="container">
+      <div class="row">
+        <div class="box">
+
+      <div class="text-right">
+        <button class="" onclick="document.getElementById('id01').style.display='block'" style="color:white; background-color:#008CBA; border-radius:4px;border: none; padding: 8px 20px; width:auto;opacity: 0.9">
+          A&#xF1;adir Evento
+        </button>
 
       </div>
       
@@ -366,19 +251,12 @@ hr {
 <footer id="footerContainer">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
-                <p id="footerDeatails">Todos los derechos reservados por &copy; Iglesia Getsemani inc. 2016</p>
-            </div>
+          <div class="col-xs-12 text-center">
+            <p id="footerDeatails">Todos los derechos reservados por <br> &copy; Iglesia Getseman&#237; inc. 2018</p>
+          </div>
         </div>
     </div>
 </footer>
-
-    <!-- jQuery
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript
-    <script src="js/bootstrap.min.js"></script>
-    -->
 
 </body>
 
