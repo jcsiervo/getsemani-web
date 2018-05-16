@@ -93,40 +93,40 @@
 
 
     <div id="id01" class="modal" style="font-family: Arial, Helvetica, sans-serif;}* {box-sizing: border-box">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <form class="modal-content" method="post" action="php/add-event.php">
-              <div class="container">
-                <h2>Nuevo Evento</h2>
-                <p>Favor de llenar toda la informacion.</p>
-                <hr>
-                <label for="event-date"><b>Fecha del Evento</b></label>
-                <input type="date" placeholder="YYYY-MM-DD" name="event-date" required>
-                <label for="event-title"><b>Titulo del Evento</b></label>
-                <input type="text" placeholder="Titulo de mi evento ..." name="event-title" required>
-                <label for="event-details"><b>Detalles</b></label>
-                <textarea rows="6" placeholder="Los detalles del evento (incluyendo horarios si es aplicable)..." name="event-details" required></textarea>
-                <label for="psw"><b>Contrasea&#xF1;a</b></label>
-                <input type="password" placeholder="contrasea&#xF1;a" name="psw" required>
-                <p>Favor de revisar todos los detalles del nuevo evento antes de a&#xF1;adir. Gracias!</p>
-                <div class="clearfix">
-                  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="evtbutton cancelbtn">Cancel</button>
-                  <button type="submit" class="evtbutton signupbtn">A&#xF1;adir Evento</button>
-                </div>
-              </div>
-            </form>
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <form class="modal-content" method="post" action="php/add-event.php">
+        <div class="container">
+          <h2>Nuevo Evento</h2>
+          <p>Favor de llenar toda la informacion.</p>
+          <hr>
+          <label for="event-date"><b>Fecha del Evento</b></label>
+          <input type="date" placeholder="YYYY-MM-DD" name="event-date" required>
+          <label for="event-title"><b>Titulo del Evento</b></label>
+          <input type="text" placeholder="Titulo de mi evento ..." name="event-title" required>
+          <label for="event-details"><b>Detalles</b></label>
+          <textarea rows="6" placeholder="Los detalles del evento (incluyendo horarios si es aplicable)..." name="event-details" required></textarea>
+          <label for="psw"><b>Contrasea&#xF1;a</b></label>
+          <input type="password" placeholder="contrasea&#xF1;a" name="psw" required>
+          <p>Favor de revisar todos los detalles del nuevo evento antes de a&#xF1;adir. Gracias!</p>
+          <div class="clearfix">
+            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="evtbutton cancelbtn">Cancel</button>
+            <button type="submit" class="evtbutton signupbtn">A&#xF1;adir Evento</button>
           </div>
+        </div>
+      </form>
+    </div>
 
-          <script>
-          // Get the modal
-          var modal = document.getElementById('id01');
+    <script>
+      // Get the modal
+      var modal = document.getElementById('id01');
 
-          // When the user clicks anywhere outside of the modal, close it
-          window.onclick = function(event) {
-              if (event.target == modal) {
-                  modal.style.display = "none";
-              }
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+          if (event.target == modal) {
+              modal.style.display = "none";
           }
-          </script>
+      }
+    </script>
 
     <div class="container">
       <div class="row">

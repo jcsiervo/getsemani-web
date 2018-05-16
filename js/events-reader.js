@@ -105,7 +105,7 @@ function createHTML(date, events_Obj, div_id) {
     var generateHere = document.getElementById(div_id);
     generateHere.innerHTML =  '<hr>' +
         '<h2 class="text-center">' +
-        '<small style="font-size:2.25vh" id="date_display"></small></h2><hr>';
+        '<small style="font-size:2.85vh;color=#1c233a;" id="date_display"></small></h2><hr>';
     document.getElementById("date_display").innerHTML = spanishDate(date);
     for(i = 0; i < events_Obj.events.length; ++i) {
         // dynamically create elements
